@@ -177,29 +177,6 @@
 			});
 		</script>
 	</div>
-
-	<script type="text/javascript" src="docroot/javascript/typeAhead/jquery.autocomplete.js"></script>
-        <script  type="text/javascript" >
-           $("#query_desktop").autocomplete2("/search/typeAhead.jsp",
-           {
-            useCache:false,
-            minChars:2,
-            lineSeparator:'</br>',
-            maxItemsToShow:6,
-            preventDefaultReturn:false,
-            onItemSelect: function(item) {
-                var text= item.value;
-                if(text.indexOf("</br>")>0){
-                    text=text.substring(0,text.indexOf("</br>"));
-                    }
-                if(text.indexOf("<span")>0){
-                    text=text.substring(0,text.indexOf("<span"));
-                }
-                $("#query_desktop").val(text);
-                $("#searchForm").submit();
-            }
-          });
-        </script>
      </div>
 
 			<div class="userBox cell web">
@@ -222,34 +199,7 @@
 		<div class="accountArea"> <a class="textBlack" rel="nofollow" href="http://www.bricodepot.fr/myaccount/login.jsp;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41?_DARGS=/navigation/userActions.jsp_AF&amp;_dynSessConf=7353062075249142883&amp;site=99999">Mon compte<i class="sprite sprite-picto_user_man"></i>
 					</a></div><div class="wishlistArea">
 			<a class="textBlack wishListLink" href="index.php#">Mes chantiers<i class="sprite sprite-picto_star"></i>
-					</a><script type="text/javascript">
-									$(document).ready(function() {
-										$('.wishListLink').on('click', function(event) {
-											event.preventDefault();
-											$.cookie("isHeaderLink", "true", { path: '/' });
-											var data = {
-												siteId: '99999',
-												pageUri: links.currPageUri,
-												addToOrderAction :false,
-												addToChantierAction :false
-											}
-											var url = '/browse/product/popup/loginPopupFrame.jsp;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41';
-											popup.showAjax(url, data, 'popupBox', function() {
-												$('#popupLoginForm').submit(function() {
-													return submitLoginPopupForm(url, function() { });
-												});
-												$('.forgotPassLink').click(function() {
-													popup.close('popupBox');
-													$.cookie('hasWishLists', '', { path: '/', expires: -1 });
-													var siteId = data.siteId;
-													popup.showAjax('/browse/product/popup/restorePasswordFrame.jsp;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41', data, 'popupBox', function() {
-														$('#restorePasswordForm').submit(submitRestorePasswordForm);
-													});
-												});
-											});
-										});
-									});
-								</script>
+					</a>
 							</div><div class="cartArea panier_pop">
 		  	</div>
 	</div>
@@ -273,102 +223,7 @@
 			<span class="menuItem menuItemWithSub mainMenuItem" data-label="Produits">Produits</span>
 			</h2>
 			<nav id="mn" class="web subMenuContainer"><!-- main navigation-->
-    				<script type="text/javascript">
-					     var megaMenuHeight=370;
-					     var megaMenuMaxColumns=5;
-                         var categories=new Array();
 
-	                             categories[2]=
-	                             {id:"brc100002",url:"/materiaux-materiel/",subCategories:
-	                                 [
-
-	                                 ]
-	                             };
-
-	                             categories[3]=
-	                             {id:"brc100007",url:"/menuiserie/",subCategories:
-	                                 [
-
-	                                 ]
-	                             };
-
-	                             categories[4]=
-	                             {id:"brc100014",url:"/salle-de-bains/",subCategories:
-	                                 [
-
-	                                 ]
-	                             };
-
-	                             categories[5]=
-	                             {id:"brc100005",url:"/cuisine/",subCategories:
-	                                 [
-
-	                                 ]
-	                             };
-
-	                             categories[6]=
-	                             {id:"brc100006",url:"/electricite/",subCategories:
-	                                 [
-
-	                                 ]
-	                             };
-
-	                             categories[7]=
-	                             {id:"brc100011",url:"/plomberie/",subCategories:
-	                                 [
-
-	                                 ]
-	                             };
-
-	                             categories[8]=
-	                             {id:"brc100003",url:"/carrelage/",subCategories:
-	                                 [
-
-	                                 ]
-	                             };
-
-	                             categories[9]=
-	                             {id:"brc100009",url:"/bois-interieur/",subCategories:
-	                                 [
-
-	                                 ]
-	                             };
-
-	                             categories[10]=
-	                             {id:"brc100010",url:"/peinture/",subCategories:
-	                                 [
-
-	                                 ]
-	                             };
-
-	                             categories[11]=
-	                             {id:"brc100004",url:"/chauffage-isolation/",subCategories:
-	                                 [
-
-	                                 ]
-	                             };
-
-	                             categories[12]=
-	                             {id:"brc100013",url:"/rangement/",subCategories:
-	                                 [
-
-	                                 ]
-	                             };
-
-	                             categories[13]=
-	                             {id:"brc100008",url:"/outillage/",subCategories:
-	                                 [
-
-	                                 ]
-	                             };
-
-	                             categories[14]=
-	                             {id:"brc100012",url:"/quincaillerie/",subCategories:
-	                                 [
-
-	                                 ]
-	                             };
-	                     	</script>
 						<ul class="clearfix">
 							<li class="classicLinkItem">
 														<a href="http://www.bricodepot.fr/nouveaute/">
@@ -647,247 +502,7 @@
 		</ul>
 </nav>
 		<div id="subMenuContainer" class="clearfix web"></div>
-	<!-- <div id = "popupBox" class="popupBox showPopup" style="display:none; z-index:6;"> -->
-	<div id="popupBoxQuickSusc" class="popupBox hidden" style="z-index:6;">
-		<div id="popup_quickSubscribe" class="popup">
-			<div class="popupTitle">
-				inscription rapide à la newsletter<a href="index.php#"  onclick="closePopup();" class="close web">
-					Fermer x</a>
-				<a href="index.php#"   onclick="closePopup();"  class="close mobile">
-					X</a>
-			</div>
-			<div class="quickSubscribeBox">
-			<div class="subscribeForm">
-				<form id="subscriptionForm" name="subscriptionForm" action="http://www.bricodepot.fr/subscription/quickSubscribePopup.jsp;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41" method="get" onsubmit="return submitSubscription('/subscription/quickSubscribePopup.jsp;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41',this);"><div style="display:none"><input name="_dyncharset" value="UTF-8" type="hidden"/> </div><div style="display:none"><input name="_dynSessConf" value="7353062075249142883" type="hidden"/> </div><input name="/brico/subscription/NewsSubscriptionFormHandler.successURL" value="/subscription/subscriptionErrors.jsp;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41" type="hidden"/><input name="_D:/brico/subscription/NewsSubscriptionFormHandler.successURL" value=" " type="hidden"/><input name="/brico/subscription/NewsSubscriptionFormHandler.errorURL" value="/subscription/subscriptionErrors.jsp;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41" type="hidden"/><input name="_D:/brico/subscription/NewsSubscriptionFormHandler.errorURL" value=" " type="hidden"/><div class="popCenter">
-						<div class="obligatoryNote web">*champs obligatoires</div>
 
-						<div class="row2">
-							<label  for="name" class="mainLabel web">
-								Prénom<span class="required"> *</span>
-								:</label>
-							<label>
-								<input id="accountUserFirstName" type="hidden" value=""/>
-								<span  for="name" class="mainLabel mobile tablet">Prénom<span class="required"> *</span>:</span>
-								<input id="subscriptionForm_firstName_id" maxlength="64" name="userName" value="" class="text" type="text"/><input name="_D:userName" value=" " type="hidden"/></label>
-						<div id="subscriptionForm_firstName" class="subscriptionError"></div>
-						</div>
-						<div class="row2">
-							<label  for="name" class="mainLabel web">Nom<span class="required"> * </span>:</label>
-							<label>
-								<input id="accountUserLastName" type="hidden" value=""/>
-								<span  for="name" class="mainLabel mobile tablet">Nom<span class="required"> * </span>:</span>
-								<input id="subscriptionForm_lastName_id" maxlength="64" name="lastName" value="" class="text" type="text"/><input name="_D:lastName" value=" " type="hidden"/></label>
-							<div id="subscriptionForm_lastName" class="subscriptionError"></div>
-						</div>
-
-						<div class="row2">
-						<label  for="name" class="mainLabel web">E-mail<span class="required"> * </span>:</label>
-						<label>
-							<input id="accountUserEmail" type="hidden" value=""/>
-							<span  for="name" class="mainLabel mobile tablet">E-mail<span class="required"> * </span>:</span>
-							<input id="subscriptionForm_email_id" maxlength="50" name="email" value="" class="text" type="text"/><input name="_D:email" value=" " type="hidden"/></label>
-						<div id="subscriptionForm_email" class="subscriptionError"></div>
-						</div>
-						<div class="row2">
-						<label class="searchLocationLabel web" for="deposit" id="span-label-select">
-							Sélection de votre dépôt<span class="required"> *</span>
-						</label>
-						<label>
-							<!--
-							<input id="accountUserDepot" type="hidden" value=""/>
-							-->
-							<span class="mainLabel select_popup mobile" for="deposit" id="span-label-select">Sélection de votre dépôt<span class="required"> *</span> </span>
-							<div class="styled-select">
-								<input name="_D:store" value=" " type="hidden"></input><select id="subscriptionForm_depot_id" name="store" class="deposit"><option value="" selected="selected"></option>
-											<option value='1942'>HARLY (02000)</option>
-							          				<option value='1935'>TOULON-SUR-ALLIER - MOULINS (03400)</option>
-							          				<option value='1753'>DOMERAT - MONTLUCON (03410)</option>
-							          				<option value='3001'>SISTERON (04200)</option>
-							          				<option value='1944'>NICE - LINGOSTIÈRE (06200)</option>
-							          				<option value='1711'>CHARLEVILLE (08000)</option>
-							          				<option value='1922'>PAMIERS VERNIOLLE (09340)</option>
-							          				<option value='1742'>BARBEREY SAINT SULPICE - TROYES (10600)</option>
-							          				<option value='1915'>CARCASSONNE (11000)</option>
-							          				<option value='1920'>RODEZ SEBAZAC (12740)</option>
-							          				<option value='1777'>MARSEILLE (13013)</option>
-							          				<option value='1778'>MARTIGUES (13500)</option>
-							          				<option value='1718'>CARPIQUET (14650)</option>
-							          				<option value='1912'>ANGOULEME - CHAMPNIERS (16430)</option>
-							          				<option value='1925'>ANDILLY - LA ROCHELLE (17230)</option>
-							          				<option value='1917'>SAINTES - SAINT GEORGES DES COTEAUX (17810)</option>
-							          				<option value='1705'>ST GERMAIN DU PUY - BOURGES (18390)</option>
-							          				<option value='1919'>BRIVE LA GAILLARDE (19100)</option>
-							          				<option value='1714'>CHENOVE (21300)</option>
-							          				<option value='1775'>PLERIN - SAINT BRIEUC (22190)</option>
-							          				<option value='1929'>PLOUËR SUR RANCE (22490)</option>
-							          				<option value='1757'>TRELISSAC - PERIGUEUX (24750)</option>
-							          				<option value='1791'>MONTBELIARD (25200)</option>
-							          				<option value='1716'>CHALEZEULE (25220)</option>
-							          				<option value='1727'>LES REYS DE SAULCE - MONTELIMAR (26270)</option>
-							          				<option value='1768'>ETOILE-SUR-RHÔNE - VALENCE (26800)</option>
-							          				<option value='1713'>CARSIX - BERNAY (27300)</option>
-							          				<option value='1941'>DREUX (28100)</option>
-							          				<option value='1781'>CHARTRES - LUISANT (28600)</option>
-							          				<option value='1771'>QUIMPER (29000)</option>
-							          				<option value='1748'>BREST (29200)</option>
-							          				<option value='1760'>PLOUIGNEAU - MORLAIX (29610)</option>
-							          				<option value='1767'>NIMES / AIGUES-VIVES (30670)</option>
-							          				<option value='1936'>PAVIE (32550)</option>
-							          				<option value='1756'>ARTIGUES (33370)</option>
-							          				<option value='1795'>BIGANOS (33380)</option>
-							          				<option value='1902'>COLOMBIERS - BEZIERS (34440)</option>
-							          				<option value='1785'>MONTPELLIER - LATTES (34970)</option>
-							          				<option value='1913'>RENNES - CESSON-SEVIGNE (35510)</option>
-							          				<option value='1741'>RENNES - SAINT GREGOIRE (35760)</option>
-							          				<option value='1774'>CHATEAUROUX (36330)</option>
-							          				<option value='1770'>SAINT CYR SUR LOIRE (37542)</option>
-							          				<option value='1943'>DAX - MÉES (40990)</option>
-							          				<option value='1712'>VILLEBAROU (41000)</option>
-							          				<option value='1797'>SAINT ETIENNE MEONS (42000)</option>
-							          				<option value='1783'>PARIGNY - ROANNE (42120)</option>
-							          				<option value='1719'>LA RICAMARIE (42150)</option>
-							          				<option value='1703'>ST HERBLAIN (44800)</option>
-							          				<option value='1932'>VILLEMANDEUR (45700)</option>
-							          				<option value='1752'>ORLEANS- SARAN (45770)</option>
-							          				<option value='1939'>ANGERS - BEAUCOUZE (49070)</option>
-							          				<option value='1725'>CHOLET (49300)</option>
-							          				<option value='1779'>ANGERS - SAINT SYLVAIN D ANJOU (49480)</option>
-							          				<option value='1736'>TOURLAVILLE (50110)</option>
-							          				<option value='1701'>REIMS (51100)</option>
-							          				<option value='1933'>VAL DE MURIGNY (51100)</option>
-							          				<option value='1754'>SAINT MEMMIE - CHALONS (51470)</option>
-							          				<option value='1927'>ST DIZIER (52100)</option>
-							          				<option value='1764'>ESSEY LES NANCY (54270)</option>
-							          				<option value='1739'>LORIENT (56100)</option>
-							          				<option value='1722'>METZ (57070)</option>
-							          				<option value='1792'>SARREBOURG (57400)</option>
-							          				<option value='1738'>FORBACH (57600)</option>
-							          				<option value='1706'>VARENNES VAUZELLES (58640)</option>
-							          				<option value='1769'>LEERS (59115)</option>
-							          				<option value='1782'>FACHES THUMESNIL (59155)</option>
-							          				<option value='1744'>FERIN - DOUAI (59169)</option>
-							          				<option value='1755'>TOURCOING (59200)</option>
-							          				<option value='1763'>BAILLEUL (59270)</option>
-							          				<option value='1709'>AULNOY LES VALENCIENNES (59300)</option>
-							          				<option value='1734'>CAMBRAI (59400)</option>
-							          				<option value='1796'>PETITE FORET (59494)</option>
-							          				<option value='1908'>MAUBEUGE (59600)</option>
-							          				<option value='1720'>BEAUVAIS (60000)</option>
-							          				<option value='1909'>COMPIEGNE-THOUROTTE (60150)</option>
-							          				<option value='1780'>CALAIS (62100)</option>
-							          				<option value='1743'>BEAURAINS - ARRAS (62217)</option>
-							          				<option value='1772'>BOULOGNE SUR MER (62280)</option>
-							          				<option value='1784'>BETHUNE (62400)</option>
-							          				<option value='1762'>BRUAY LA BUISSIERE (62700)</option>
-							          				<option value='1708'>LIEVIN (62803)</option>
-							          				<option value='1723'>LEMPDES - CLERMONT FERRAND (63370)</option>
-							          				<option value='1759'>PAU - MAZERES-LEZONS (64110)</option>
-							          				<option value='1733'>ODOS (65310)</option>
-							          				<option value='1704'>CLAIRA (66530)</option>
-							          				<option value='1903'>STRASBOURG - GEISPOLSHEIM (67118)</option>
-							          				<option value='1914'>HAGUENAU (67507)</option>
-							          				<option value='1907'>COLMAR (68000)</option>
-							          				<option value='1765'>MORSCHWILLER LE BAS (68790)</option>
-							          				<option value='1901'>VILLEFRANCHE SUR SAONE (69400)</option>
-							          				<option value='1911'>ST PRIEST (69800)</option>
-							          				<option value='1934'>MONTCEAU LES MINES (71300)</option>
-							          				<option value='1737'>CRECHES SUR SAONE - MACON (71680)</option>
-							          				<option value='1787'>ALENCON - ARCONNAY (72610)</option>
-							          				<option value='1740'>LE MANS - ALLONNES (72700)</option>
-							          				<option value='1904'>ANNEMASSE (74100)</option>
-							          				<option value='1750'>ROUEN (76021)</option>
-							          				<option value='1746'>DIEPPE (76200)</option>
-							          				<option value='1790'>VAUX LE PENIL - MELUN (77000)</option>
-							          				<option value='1788'>CANNES ECLUSE (77130)</option>
-							          				<option value='1906'>VAIRES SUR MARNE (77360)</option>
-							          				<option value='1930'>FLINS-SUR-SEINE (78140)</option>
-							          				<option value='1956'>SARTROUVILLE (78500)</option>
-							          				<option value='1729'>AMIENS (80044)</option>
-							          				<option value='1900'>SOUAL - CASTRES (81580)</option>
-							          				<option value='1761'>GAILLAC (81600)</option>
-							          				<option value='1747'>MONTAUBAN (82008)</option>
-							          				<option value='1773'>TOULON (83000)</option>
-							          				<option value='1745'>LE PONTET - AVIGNON (84270)</option>
-							          				<option value='1758'>LA ROCHE SUR YON (85000)</option>
-							          				<option value='1717'>DISSAY (86130)</option>
-							          				<option value='1924'>EPINAL (88000)</option>
-							          				<option value='1789'>PERRIGNY - AUXERRE (89000)</option>
-							          				<option value='1786'>STE GENEVIEVE DES BOIS (91700)</option>
-							          				<option value='1938'>NANTERRE (92000)</option>
-							          				<option value='1937'>VILLETANEUSE (93430)</option>
-							          				<option value='1751'>GARGES LES GONESSE (95140)</option>
-							          				<option value='1776'>SAINT WITZ (95470)</option>
-							          				</select></div>
-						</label>
-						<div id="subscriptionForm_depot" class="subscriptionError"></div>
-						</div>
-						<div class="row2">
-							<label class="red mobile">*champs obligatoires</label>
-						</div>
-					</div>
-
-					<br>
-
-					<!-- defines the URL to go to on success (relative to 'action')-->
-					<div class="textCenter">
-						<input name="/brico/subscription/NewsSubscriptionFormHandler.subscribe" value="Valider" type="hidden"/><input name="_D:/brico/subscription/NewsSubscriptionFormHandler.subscribe" value=" " type="hidden"/><input class="button" type="submit" value="Valider" id="btnValidateNewsSubscribe" />
-					</div>
-					<div class="popupLinks">
-						La sélection d'un dépôt permettra à Brico Dépôt de vous envoyer des offres, actualités de votre dépôt.</div>
-				<div style="display:none"><input name="_DARGS" value="/subscription/quickSubscribePopup.jsp.subscriptionForm" type="hidden"/> </div></form></div>
-			<div id="successfullMessage" class="successfullMessage hidden">Vous venez de vous inscrire à la newsletter.</div>
-		</div>
-		</div>
-	</div>
-<script type="text/javascript">
-
-$(document).ready(function() {
-
-    if ($(window).width() <= '1024') {
-
-    	var currentPopupBox = $('.popupBox');
-
-		$('input', currentPopupBox).change(function() {
-		    if ($(this).val().length >= 1) {
-			$(this).addClass('active');
-		    } else {
-			$(this).removeClass('active');
-		    }
-		});
-
-		$('select',currentPopupBox).change(function() {
-		    if ($(this).val().length >= 1) {
-
-			$(this).addClass('active');
-			children = $(this).parents().eq(1).children().first();
-			if (children.is("span")) {
-				document.getEelementById('span-label-select').style.visibility='hidden';
-			    children.css("visibility", "hidden");
-			}
-		    } else {
-			$(this).removeClass('active');
-			children = $(this).parents().eq(1).children().first();
-			if (children.is("span")) {
-				document.getEelementById('span-label-select').style.visibility='inherit';
-			    children.css("visibility", "inherit");
-			}
-		    }
-		});
-    }
-
-
-    $("#btnValidateNewsSubscribe").click(function(){
-    	dataLayer.push({ 'pageName': 'newsletter',
-    		'magasin': '',
-		 	'id_magasin': '99999',
-			'id_client': '970797382',
-			'visitorType': 'optin',
-			'Event': 'newsletter'});
-    	return true;
-    });
-
-});
-</script>
 <div class="usefullLinksContainer mobile clearfix" >
 		<div class="" id="logoContainer">
 			<a href='index.php'> <img alt="" title="" src="docroot/images/header/logo_bricodepot.png" width="120" height="90" /></a>
@@ -911,34 +526,6 @@ $(document).ready(function() {
 				</li>
 			</ul>
 
-			<script type="text/javascript">
-
-		  $(document).ready(function(){
-
-
-			  var isMobile='false';
-			  var isTablet='false';
-			  var lastUsedUriInMobileDevice='';
-			  var currentSiteUri = links.currSiteUri;
-			  var currentUri=window.location.href;
-			  currentUri=currentUri.substring(currentUri.indexOf(currentSiteUri),currentUri.length);
-			  var urlHideShowMenu = "/hs_m?uri="+currentUri+"&isMobile="+isMobile+"&isTablet="+isTablet;
-			  $.ajax({
-					url:urlHideShowMenu,
-					dataType: "text",
-					cache:false,
-					sync:false,
-					success: function(data) {
-
-					},error: function(data) {
-
-					}
-
-				});
-
-		  })
-
-		 </script>
 
 
 </nav>
@@ -952,19 +539,7 @@ $(document).ready(function() {
 		<a href="http://www.bricodepot.fr/;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41"> null</a>
 	</span>
 </div>
-		<script>
-			$("#searchForm_mobile").submit(function() {
-				var inputValue = $("#query_mobile").val();
-				if (isEmpty(inputValue) || (inputValue==$("#query_mobile").attr('title') && $("#query_mobile").css('color')=='#707070')){
-					return false;
-				}
-				var transformedValue = transformValue(inputValue);
-				var action = "/search/node/;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41" +transformedValue;
-				var encodedValue = excludeSpecialSimbols(encodeURIComponent(transformedValue));
-				$(this).attr("action", "/search/node/;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41" + encodedValue);
-				return true;
-			});
-		</script>
+
 
 	<div class="search_mobile mobile">
 		<form action="http://www.bricodepot.fr/search/node/;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41" method="GET" id="searchForm_mobile"
@@ -975,88 +550,6 @@ $(document).ready(function() {
 				<input type="submit" class="mobile" id="searchButton_mobile" value="" />
 		</form>
 	</div>
-
-	<script  type="text/javascript" >
-           $("#query_mobile").autocomplete2("/search/typeAhead.jsp",
-           {
-            useCache:false,
-            minChars:2,
-            lineSeparator:'</br>',
-            maxItemsToShow:6,
-            preventDefaultReturn:false,
-            onItemSelect: function(item) {
-                var text= item.value;
-                if(text.indexOf("</br>")>0){
-                    text=text.substring(0,text.indexOf("</br>"));
-                    }
-                if(text.indexOf("<span")>0){
-                    text=text.substring(0,text.indexOf("<span"));
-                }
-                $("#query_mobile").val(text);
-                $("#searchForm_mobile").submit();
-            }
-          });
-        </script>
-     <script type="text/javascript">
-	  '';
-	  '';
-	  </script>
-	<script type="text/javascript">
-		function getCookieExpireDate() {
-			var cookieTimeout = 34214400000;// Le nombre de millisecondes que font 13 mois
-			var date = new Date();
-			date.setTime(date.getTime() + cookieTimeout);
-			var expires = "; expires=" + date.toGMTString();
-			return expires;
-		}
-
-		// Cette fonction est appelée pour afficher la demande de consentement
-		function askConsent() {
-			document.getElementById("ctl00_theseusCookiePolicy_ulCookiePol").style.display = "";
-		}
-
-		// Retourne la chaine de caractère correspondant à nom=valeur
-		function getCookie(NomDuCookie) {
-			if (document.cookie.length > 0) {
-				begin = document.cookie.indexOf(NomDuCookie + "=");
-				if (begin != -1) {
-					begin += NomDuCookie.length + 1;
-					end = document.cookie.indexOf(";", begin);
-					if (end == -1)
-						end = document.cookie.length;
-					return unescape(document.cookie.substring(begin, end));
-				}
-			}
-			return null;
-		}
-
-		// Fonction d'effacement des cookies
-		function delCookie(name) {
-			path = ";path=" + "/";
-			domain = ";domain=" + "." + document.location.hostname;
-			var expiration = "Thu, 01-Jan-1970 00:00:01 GMT";
-			document.cookie = name + "=" + path + domain + ";expires=" + expiration;
-		}
-
-		// La fonction d'opt-out
-		function gaOptout() {
-			document.getElementById("ctl00_theseusCookiePolicy_ulCookiePol").style.display = "none";
-			document.cookie = 'hasConsent=false;' + getCookieExpireDate() + ' ; path=/';
-		}
-
-		// Ce bout de code vérifie que le consentement n'a pas déjà été obtenu avant d'afficher
-		// la baniére
-		var consentCookie = getCookie('hasConsent');
-		if (!consentCookie) {//L'utilisateur n'a pas encore de cookie de consentement
-			var referrer_host = document.referrer.split('/')[2];
-			if (referrer_host != document.location.hostname) { //si il vient d'un autre site
-				//on désactive le tracking et on affiche la demande de consentement
-				window.onload = askConsent;
-			} else { //sinon on lui dépose un cookie
-				document.cookie = 'hasConsent=true; ' + getCookieExpireDate() + ' ; path=/';
-			}
-		}
-	</script>
 
 	<ul class="ulCookiePol ulCookiePolPos3" id="ctl00_theseusCookiePolicy_ulCookiePol" style="display: none">
 		<li class="liCookiePol">
@@ -1084,36 +577,13 @@ $(document).ready(function() {
 			</div>
 		</li>
 	</ul>
-	<script type="text/javascript">
-		var clickPopin = false;
-		$('#ctl00_theseusCookiePolicy_ulCookiePol').click(function() {
-			clickPopin = true;
-		});
-		$('html').click(function() {
-			if (clickPopin == false) {
-				gaOptout();
-			}
-		});
-	</script>
+
 </header>
 
 			<div class="clearfix">
 				<div>
 				</div>
-		    <script type="text/javascript">
 
-		$(document).ready(
-				function() {
-
-
-
-					if ($("#EncartPEBPriceUrl").length > 0) {
-						$(".priceData ").empty();
-						$(".priceData").html('0 <span class="unit">&euro; TTC</span>');
-						 $("#EncartPEBPriceUrl").attr("href",'/maison-brico/;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41');
-					}
-				});
-	</script>
 </div>
 			<footer class="footer-container textBlack">
 				<div class="line footerLineContainer wrapper clearfix" id="footerLineReinsurance">
@@ -1369,7 +839,6 @@ $(document).ready(function() {
 	</ul>
 	</div>
 </footer>
-			<div class="overlay hidden"></div>
 		</div>
 	</div>
 <link rel="stylesheet" type="text/css" href="docroot/css/mobilePreHome.css" />
@@ -1386,116 +855,10 @@ $(document).ready(function() {
 			    		requestUrl=requestUrl.substring(0, index);
 			    	}
 			    </script>
-			<div class="overlay" style="display: block;"></div>
-		<div class="outBox web">
-			<div class="prehome">
-				<noscript>
-					<div style="text-align: center; font-size: 17px; font-weight: bold; color: red;">
-						<span>Le Javascript est désactivé, les fonctionnalités du site risquent d'être limitées.</span>
-					</div>
-				</noscript>
-				<div class="header clearfix">
-					<div class="logo">
-						<img alt="BricoDepot" title="" src="docroot/images/header/logo_bricodepot.png" width="110" height="82.5" />
-					</div>
-					<div class="title">
-						<div>
-							Bienvenue</div>
-						<div>
-							sur www.bricodepot.fr</div>
-						<div>
-							Choisissez votre dépôt !</div>
-					</div>
-				</div>
-
-				<div class="content clearfix">
-
-					<div id="vector-map"></div>
-					<div class="chooseStore">
-
-						<div>
-							<form method="get" action="index.php#" id="findStoreForm">
-								<div class="row clearfix">
-									<label class="checkboxStyled"> <input type="checkbox" id="rememberChoice" checked />
-									</label> <label for="rememberChoice">Sauvegarder ma sélection* pour une prochaine visite sur&nbsp;<span class="accented">www.bricodepot.fr</span></label>
-								</div>
-							</form>
-							<div class="listDepotLabel">
-								Les 3 d&eacute;p&ocirc;ts les plus proches de votre position :</div>
-							<div id="tableDepotProche" class="tableDepotProximite">
+	
 
 </div>
-<script>
-// La géolocalisation est-elle prise en charge par le navigateur ?
-if(navigator.geolocation)
-{
-	navigator.geolocation.getCurrentPosition(showLocation, errorHandler, {enableHighAccuracy:false, maximumAge:0, timeout: 10000});
-}
-else
-{
-	$(".tableDepotProximite").html("<label>Votre navigateur ne prend pas en charge la g&eacute;olocalisation</label><br></br>");
-}
-//fonction appelée si le partage de position est accepté
-function showLocation(position)
-{
-	var targetUrl = '';
-	var redirectQueryFragment = (targetUrl==null || targetUrl.length==0) ? '' : '&target_url='+targetUrl;
-	var urlString = "/get_Depot_Geo_Loc_json_format?"+position.coords.latitude+";"+position.coords.longitude+redirectQueryFragment;
-	$.ajax({
-		url:urlString,
-		dataType: "text",
-		cache:false,
-		success: function(data) {
-			var json =jQuery.parseJSON(data);
-			var depots = json.Depots;
-			var table = $("<table class=\"tableDepotProche\"></table>");
-			var addEven = true;
-			var i = 0;
-			for (var key in depots) {
-				i = i+1;
-			    var depot = depots[key];
-			    row = $(table[0].insertRow(-1));
-			    var cell = $("<td />");
-			    cell.html(depot.DepotName);
-			    row.append(cell);
 
-			    cell = $("<td />");
-			    cell.html(depot.DepotDistance + " kms");
-			    row.append(cell);
-			    cell = $("<td />");
-			    if(depot.DepotDriveOk){
-
-			    	cell.html("Drive");
-
-			    }
-				cell.addClass('listDepotLabel');
-			    row.append(cell);
-			    cell = $("<td />");
-
-			    var url = depot.DepotSiteUrl;
-			    cell.html("<a onclick=\"changeWebStore("+depot.id+",'"+url+"');\" class=\"button web\" href="http://www.bricodepot.fr/\&quot;#\"">ACCEDER</a><a onclick=\"changeMobileStore("+depot.id+", '"+url+"');\" class=\"button mobile\" href="http://www.bricodepot.fr/\&quot;#\"">ACCEDER</a>");
-			    row.append(cell);
-			    if(addEven){
-			    	row.addClass('even');
-			    	addEven = false;
-			    }else{
-			    	addEven = true;
-			    }
-			}
-			$(".tableDepotProximite").html(table);
-		}
-	});
-};
-// Fonction de gestion des erreurs
-function errorHandler(error)
-{
-	if(error.code == error.PERMISSION_DENIED){
-		$(".tableDepotProximite").html("<label>Vous n'avez pas autoris&eacute; l'acc&eacute;s &agrave; votre position</label><br></br>");
-	}else{
-		$(".tableDepotProximite").html("<label>La r&eacute;cup&eacute;ration de votre position a &eacute;chou&eacute;</label><br></br>");
-	}
-};
-</script>
 <div class="listDepotLabel">
 								OU choisissez un d&eacute;p&ocirc;t dans la liste :</div>
 							<div>
