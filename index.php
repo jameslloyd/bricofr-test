@@ -209,19 +209,19 @@
 					<div class="cell textBlack clearfix">
 						<p class="storeName">
 							<label class="">Mon dépôt :</label>
-							<a title="Voir la fiche détaillée de mon magasin" class="textRed" href="index.html"> - </a></p>
+							<a title="Voir la fiche détaillée de mon magasin" class="textRed" href="index.php"> - </a></p>
 					</div>
 					<i class="expandablePicto"></i>
 					<i class="expandedPicto"></i>
 				</div>
 				<p class="storeDetails">
-					<a class="textRed storeChangeLink" onclick="changeForANewStore(false, '99999');" href="index.html#">Changez de dépôt</a></p>
+					<a class="textRed storeChangeLink" onclick="changeForANewStore(false, '99999');" href="index.php#">Changez de dépôt</a></p>
 			</div>
 
 		<div class="cell userActionsArea">
 		<div class="accountArea"> <a class="textBlack" rel="nofollow" href="http://www.bricodepot.fr/myaccount/login.jsp;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41?_DARGS=/navigation/userActions.jsp_AF&amp;_dynSessConf=7353062075249142883&amp;site=99999">Mon compte<i class="sprite sprite-picto_user_man"></i>
 					</a></div><div class="wishlistArea">
-			<a class="textBlack wishListLink" href="index.html#">Mes chantiers<i class="sprite sprite-picto_star"></i>
+			<a class="textBlack wishListLink" href="index.php#">Mes chantiers<i class="sprite sprite-picto_star"></i>
 					</a><script type="text/javascript">
 									$(document).ready(function() {
 										$('.wishListLink').on('click', function(event) {
@@ -651,9 +651,9 @@
 	<div id="popupBoxQuickSusc" class="popupBox hidden" style="z-index:6;">
 		<div id="popup_quickSubscribe" class="popup">
 			<div class="popupTitle">
-				inscription rapide à la newsletter<a href="index.html#"  onclick="closePopup();" class="close web">
+				inscription rapide à la newsletter<a href="index.php#"  onclick="closePopup();" class="close web">
 					Fermer x</a>
-				<a href="index.html#"   onclick="closePopup();"  class="close mobile">
+				<a href="index.php#"   onclick="closePopup();"  class="close mobile">
 					X</a>
 			</div>
 			<div class="quickSubscribeBox">
@@ -890,7 +890,7 @@ $(document).ready(function() {
 </script>
 <div class="usefullLinksContainer mobile clearfix" >
 		<div class="" id="logoContainer">
-			<a href='index.html'> <img alt="" title="" src="docroot/images/header/logo_bricodepot.png" width="120" height="90" /></a>
+			<a href='index.php'> <img alt="" title="" src="docroot/images/header/logo_bricodepot.png" width="120" height="90" /></a>
 		</div>
 		<nav class="userActionsArea">
 			<ul class="horizontalBar">
@@ -903,7 +903,7 @@ $(document).ready(function() {
 							</a></li><!--
 
 				 --><li class="userActionsItem"  id="userActionWishlist">
-					<a class="wishListLink" href="index.html#"><img alt="" title="" src="docroot/images/header_responsive/mdpi/picto_list_off@1x.png">
+					<a class="wishListLink" href="index.php#"><img alt="" title="" src="docroot/images/header_responsive/mdpi/picto_list_off@1x.png">
 							</a></li><!--
 
 				 --><li id="userActionMainMenu" class="" >
@@ -1130,7 +1130,7 @@ $(document).ready(function() {
 				--><div class="footerBox footerBoxYourStore">
 					<p class="footerBoxTitle">Votre dépôt</p>
 <p class="footerStoreName"> - </p>
-<a class="newBtn newBtnRed yourStoreBtn" onclick="changeForANewStore(false, '99999');" href="index.html#">Changez de dépôt</a><a href="http://www.bricodepot.fr/donnez-votre-avis/" class="yourOpinionBtn" target="_parent">
+<a class="newBtn newBtnRed yourStoreBtn" onclick="changeForANewStore(false, '99999');" href="index.php#">Changez de dépôt</a><a href="http://www.bricodepot.fr/donnez-votre-avis/" class="yourOpinionBtn" target="_parent">
 	  				<img alt="Donnez votre avis et tentez de gagnez 15 €" title="Donnez votre avis et tentez de gagnez 15 €" src="docroot/images/footer/anim-btn-gagner15euros.gif" />
 	  			</a>
 		  	</div><!--
@@ -1294,8 +1294,8 @@ $(document).ready(function() {
 	  			</li>
 	  		</ul>
 			</nav>
-  <a class="footerImageLink" href="index.html#" title="Meilleure chaine de magasin France 2015-2016 - Bricolage" target="_parent"></a>
-		  	<a class="footerImageLink" href="index.html#" title="Enseigne de l'année 2015- Bricolage" target="_parent"></a>
+  <a class="footerImageLink" href="index.php#" title="Meilleure chaine de magasin France 2015-2016 - Bricolage" target="_parent"></a>
+		  	<a class="footerImageLink" href="index.php#" title="Enseigne de l'année 2015- Bricolage" target="_parent"></a>
 		  	</div>
 			</div><!--
 			 --><div class="line footerLineContainer wrapper mobile">
@@ -1414,7 +1414,7 @@ $(document).ready(function() {
 					<div class="chooseStore">
 
 						<div>
-							<form method="get" action="index.html#" id="findStoreForm">
+							<form method="get" action="index.php#" id="findStoreForm">
 								<div class="row clearfix">
 									<label class="checkboxStyled"> <input type="checkbox" id="rememberChoice" checked />
 									</label> <label for="rememberChoice">Sauvegarder ma sélection* pour une prochaine visite sur&nbsp;<span class="accented">www.bricodepot.fr</span></label>
@@ -1631,7 +1631,7 @@ function errorHandler(error)
 			        		<option value='1776' url="/st-witz/">95 - SAINT WITZ</option>
 			        		</select><br/>
 
-		<a href="index.html#" class="button" id="access-btn">ACCÉDER AU SITE</a>
+		<a href="index.php#" class="button" id="access-btn">ACCÉDER AU SITE</a>
 		<script type="text/javascript">
 			function manageSelectStore(){
 				$("#access-btn").hide()
@@ -2024,7 +2024,7 @@ function errorHandler(error)
 				        		</select></div>
 		<br></br>
 
-		<a href="index.html#" class="button" id="access-btn-mobile">ACCÉDER AU SITE</a>
+		<a href="index.php#" class="button" id="access-btn-mobile">ACCÉDER AU SITE</a>
 		<script type="text/javascript">
 			function manageSelectStoreMobile(){
 				 $("#access-btn-mobile").hide();
