@@ -1,0 +1,173 @@
+var docroot="docroot";if(typeof staticContentContext!="undefined"){docroot=staticContentContext
+}var pictoFolder="/"+docroot+"/images/chantiers/pictos/";var chantiers;var mbd={chantiers:"",rooms:"",viewType:"",videoPlaying:"",videoWaiting:"",sens:1,currentViewID:1,nextViewID:2,stopOnViewDelay:500,playerLocked:false,firstLaunch:true,path:"",urlView3d:links.currSiteUri+"browse/house/chantier-vues-3d.jsp",playbackRate:1,videoID:1,video:{viewHouse:{video_1:"house"},view3d:{video_1:{file:"chambreParents"},video_2:{file:"chambreEnfants"},video_3:{file:"chambreCombles"},video_4:{file:"salon"},video_5:{file:"sdb"},video_6:{file:"cuisine"},video_7:{file:"entree",novideo:true},video_8:{file:"terrasse"},video_9:{file:"wc"},video_10:{file:"isolationCombles"}}},timer:{viewHouse:{video_1:{"view_1":{"time":0},"view_2":{"time":2.5},"view_3":{"time":5},"view_4":{"time":7.5}}},view3d:{video_1:{"view_1":{"time":0},"view_2":{"time":2.5}},video_2:{"view_1":{"time":0,"controls":false}},video_3:{"view_1":{"time":0},"view_2":{"time":2.3}},video_4:{"view_1":{"time":0},"view_2":{"time":2.11},"view_3":{"time":4.6}},video_5:{"view_1":{"time":0},"view_2":{"time":2.5}},video_6:{"view_1":{"time":1.1,"controls":false}},video_7:{"view_1":{"time":0,"controls":false}},video_8:{"view_1":{"time":0,"controls":false}},video_9:{"view_1":{"time":0,"controls":false}},video_10:{"view_1":{"time":0,"controls":false}}}},init:function(){$.ajax({url:"../../.."+links.currSiteUri+"get_chantier_json_format",dataType:"text",cache:false,success:function(data){json=$.parseJSON(data);
+chantiers=json.chantiers;$(document).trigger("jsonChantier");$("#nbr_chantiers").text(16);
+$(".PictoView").hide().css({left:"50%",top:"50%"});var request1=mbd.parseUrlAnchor("-")[0];
+var request2=mbd.parseUrlAnchor("-")[1];if(request2!=undefined&&request2!=""){if(request2.split("_")[0]=="chantier"){var chantier=request2.split("_")[1]
+}mbd.highlightPicto(chantier)}$.ajax({url:"../../.."+links.currSiteUri+"get_rooms_json_format",dataType:"text",cache:false,success:function(data){json=$.parseJSON(data);
+mbd.rooms=json.rooms;$(document).trigger("jsonRoom");var room3d=mbd._GET("room3d");
+if(room3d==undefined){mbd.videoID=1}else{mbd.videoID=mbd._GET("room3d")}var videoFile=mbd.video[mbd.viewType]["video_"+mbd.videoID].file;
+if(mbd.viewType=="viewHouse"){}if(mbd.viewType=="view3d"){var poster="../../../"+docroot+"/video/poster/"+videoFile+".jpg";
+var widthVideo=960;var heightVideo=537;var ratio=widthVideo/heightVideo;if(mbd.ie8()){var poster=""
+}if(mbd.isMobile()&&window.matchMedia("(orientation: portrait)").matches){widthVideo=704;
+heightVideo=widthVideo/ratio}var poster="../../../"+docroot+"/video/poster/"+videoFile+".jpg";
+var videoPath="../../../"+docroot+"/video/"+videoFile;var videos="";videos+='<video width="'+widthVideo+'" height="'+heightVideo+'"  class="videoMedia" id="video_forward" poster="'+poster+'" data-setup="{}">';
+videos+='		<source src="'+videoPath+'.mp4" class="sourceMp4" type="video/mp4">';videos+='		<source src="'+videoPath+'.webm" class="sourceWebm" type="video/webm">';
+videos+="</video>";videos+='<video width="'+widthVideo+'" height="'+heightVideo+'" class="videoMedia" id="video_backward" poster="'+poster+'" data-setup="{}">';
+videos+='		<source src="'+videoPath+'.mp4" class="sourceMp4" type="video/mp4">';videos+='		<source src="'+videoPath+'.webm" class="sourceWebm" type="video/webm">';
+videos+="</video>";$(".VideoView").append($(videos));$(".VideoView video source").attr("src",""+videoPath+".mp4")
+}if($("#video_forward").length>0){mbd.videoPlaying=mbd.getVideoElement("video_forward")
+}if($("#video_backward").length>0){mbd.videoWaiting=mbd.getVideoElement("video_backward")
+}if(!mbd.ie8()||!mbd.isMobile()){}$("#video_forward").show();$("#video_backward").hide();
+mbd.setPlaybackRate(mbd.playbackRate);mbd.setPlaybackRate(mbd.playbackRate);setTimeout(function(){mbd.setPictosByView(1)
+},500);if(mbd.ie8()&&mbd.viewType=="viewHouse"){$(".videoMedia").hide()}},error:function(data){window.location.replace("../../.."+links.currSiteUri)
+}})},error:function(data){window.location.replace("../../.."+links.currSiteUri)}});
+var needFallback=false;if(mbd.ie8()){needFallback=true}if(mbd.safari()){if(mbd.safariVersion("5.1")||mbd.safariVersion("5.0")||mbd.safariVersion("4")){needFallback=true
+}}if(mbd.viewType=="viewHouse"){if(mbd.ie()){$(".videoMedia").removeAttr("poster")
+}if(mbd.isMobile()&&window.matchMedia("(orientation: portrait)").matches){$(".videoMedia").attr("height",437)
+}if(mbd.isMobile()&&window.matchMedia("(orientation: landscape)").matches){$(".videoMedia").attr("height",524);
+$(".videoMedia").css({left:"-50px"})}if(!mbd.isMobile()){$(".VideoView .videoMedia ").css({maxWidth:"95%"})
+}if(!needFallback){$("#btnPrevStep").click(function(){if(mbd.isMobile()){mbd.play(-1)
+}else{mbd.play(1)}});$("#btnNextStep").click(function(){mbd.play(-1)})}if(needFallback){mbd.initFallback()
+}}if(mbd.viewType=="view3d"){if(mbd.ie8()){needFallback=true}if(!needFallback){if(mbd.isMobile()&&window.matchMedia("(orientation: portrait)").matches){$(".VideoControls .btnPrevStep, .VideoView .btnNextStep").css({top:"110px"})
+}$("#btnPrevStep").click(function(){if(mbd.isMobile()||mbd.ie8()){mbd.play(-1)}else{mbd.play(1)
+}});$("#btnNextStep").click(function(){mbd.play(-1)})}if(needFallback){mbd.initFallback()
+}}$(".PictoView").hover(function(){var chantier=$(this).attr("id");mbd.highlightPicto(chantier)
+},function(){var chantier=$(this).attr("id");mbd.unlightPicto(chantier)})},getVideoElement:function(id){if(mbd.ie8()){return videojs(id)
+}else{return $("#"+id).get(0)}},setPlaybackRate:function(pb){},playDEV:function(){mbd.videoPlaying.play()
+},sortNumeric:function(_array){_array.sort(function(a,b){return a>b})},parseUrlAnchor:function(parser){var ancre=window.location.hash.substr(1).split(parser);
+return new Array(ancre[0],ancre[1])},_GET:function(param){var ancre=window.location.hash.substr(1).split("-");
+var request=new Array();for(var k in ancre){var keyValue=ancre[k].split("_");request[keyValue[0]]=keyValue[1]
+}return request[param]},getJSON:function(file,callback){$.ajax({url:"json/"+file,dataType:"text",success:function(data){mbd.json=$.parseJSON(data);
+$(document).trigger("jsonLoaded")}})},getObjectLength:function(obj){if(!mbd.ie8()){return Object.keys(obj).length
+}else{var count=0;var i;for(i in obj){if(obj.hasOwnProperty(i)){count++}}return count
+}},iPad:function(){if(navigator.userAgent.indexOf("iPad")>-1){return true}return false
+},ie8:function(){if(navigator.appVersion.indexOf("MSIE 8.")!=-1){return true}return false
+},ie:function(){if(navigator.appVersion.indexOf("Trident")!=-1){return true}return false
+},mac:function(){if(navigator.platform.toUpperCase().indexOf("MAC")>=0){return true
+}return false},safari:function(){if(navigator.userAgent.indexOf("Safari")>-1&&navigator.userAgent.indexOf("Chrome")==-1){return true
+}return false},safariVersion:function(version){if(navigator.userAgent.indexOf("Version/"+version)>-1){return true
+}return false},chrome:function(){if(navigator.userAgent.indexOf("Safari")>-1&&navigator.userAgent.indexOf("Chrome")>-1){return true
+}return false},initFallback:function(){if(mbd.viewType=="viewHouse"){var fallbackCSS={width:523+"px",height:457+"px",zIndex:2}
+}if(mbd.viewType=="view3d"){var width=960;var height=537;var roomID=mbd._GET("room3d");
+var nbrViews=mbd.getObjectLength(mbd.timer.view3d["video_"+roomID]);var fallbackCSS={position:"relative",width:width+"px",height:height+"px",zIndex:2,left:0,top:0};
+for(var i=1;i<=nbrViews;i++){var display="block";if(i>1){display="none"}var img='<img src="../../../docroot/video/fallback/room3d_'+roomID+"/view_"+i+'.jpg" class="viewIE view_'+i+'" id="view_'+i+'" style="display: '+display+"; width: 100%; height: "+height+'px;"/>';
+$(".view3D .IE8fallback").append(img)}}$(document).on("jsonRoom",function(){setTimeout(function(){$(".VideoView video").remove()
+},1000)});$("#btnPrevStep").click(function(){mbd.gotoView(-1)});$("#btnNextStep").click(function(){mbd.gotoView(1)
+});$("#IE8fallback").css(fallbackCSS).show()},pause:function(){mbd.videoPlaying.pause()
+},getStepTime:function(){var currentTime=parseFloat(mbd.getCurrentTime());if(mbd.sens==-1){return parseFloat(mbd.getDuration()-currentTime)
+}return currentTime},updateNextView:function(){var nbrSteps=mbd.getObjectLength(mbd.timer[mbd.viewType]["video_"+mbd.videoID]);
+mbd.nextViewID=parseInt(parseInt(mbd.currentViewID)+parseInt(mbd.sens));if(mbd.nextViewID==parseInt(nbrSteps+1)){mbd.nextViewID=1
+}if(mbd.nextViewID==0){mbd.nextViewID=nbrSteps}},stopOnView:function(nextViewID){var timeView=mbd.timer[mbd.viewType]["video_"+mbd.videoID]["view_"+nextViewID].time;
+var videoEnded=false;clr1=setInterval(function(){var stepTime=mbd.getStepTime();if(!mbd.ie8()){var shift1=0.3;
+var shift2=0.1}else{var shift1=1.5;var shift2=1}if(mbd.videoPlaying.ended){mbd.setCurrentTime(0);
+mbd.videoPlaying.play()}if((stepTime>=timeView&&stepTime<=(timeView+shift1))||((stepTime>=mbd.getDuration()-shift2&&stepTime<=mbd.getDuration())&&timeView==0)){clearInterval(clr1);
+mbd.videoPlaying.pause();mbd.currentViewID=mbd.nextViewID;mbd.playerLocked=false;
+mbd.firstLaunch=false;mbd.setPictosByView(nextViewID);if(mbd.iPad()){if(timeView==0){mbd.videoPlaying.play();
+mbd.setCurrentTime(0.25);mbd.videoPlaying.pause()}}return}},100)},playTo:function(viewID){mbd.nextViewID=viewID;
+mbd.removePictos();mbd.unlightItems();mbd.videoPlaying.play();mbd.clrStopOnView=setTimeout(function(){mbd.stopOnView(viewID);
+clearTimeout(mbd.clrStopOnView)},mbd.stopOnViewDelay);var controls=mbd.timer[mbd.viewType]["video_"+mbd.videoID]["view_"+viewID].controls;
+if(mbd.timer[mbd.viewType]["video_"+mbd.videoID]["view_"+viewID].controls!=undefined){if(controls){$(".VideoControls").show()
+}else{$(".VideoControls").hide()}}},displayControls:function(viewID){var controls=mbd.timer[mbd.viewType]["video_"+mbd.videoID]["view_"+viewID].controls;
+if(mbd.timer[mbd.viewType]["video_"+mbd.videoID]["view_"+viewID].controls!=undefined){if(controls){$(".VideoControls").show()
+}else{$(".VideoControls").hide()}}},play:function(sens){if(!mbd.playerLocked){mbd.playerLocked=true;
+if(mbd.sens==sens){mbd.reverse()}else{mbd.videoPlaying.play()}mbd.removePictos();
+mbd.unlightItems();mbd.updateNextView();if(!mbd.ie8()){mbd.clrStopOnView=setTimeout(function(){mbd.stopOnView(mbd.nextViewID);
+clearTimeout(mbd.clrStopOnView)},mbd.stopOnViewDelay)}else{mbd.stopOnView(mbd.nextViewID);
+mbd.videoPlaying.play()}}},gotoView:function(sens){if(mbd.sens!=sens){mbd.sens=sens
+}mbd.updateNextView();var viewID=mbd.nextViewID;$("#IE8fallback .viewIE").hide();
+$("#IE8fallback").find("#view_"+viewID).show();$(".PictoView, .InfoBulle").hide();
+mbd.unlightItems();mbd.setPictosByView(viewID);mbd.currentViewID=viewID},reverse:function(){var videoDuration=mbd.getDuration();
+var seekTime=mbd.videoPlaying.currentTime;if(seekTime>=0&&seekTime<=0.1){seekTime=videoDuration
+}mbd.videoWaiting.currentTime=parseFloat(videoDuration-seekTime);mbd.videoPlaying.pause();
+mbd.sens=-mbd.sens;setTimeout(function(){$("#"+mbd.videoPlaying.id).css("z-index",1);
+$("#"+mbd.videoWaiting.id).css("z-index",2);$("#"+mbd.videoPlaying.id).hide();$("#"+mbd.videoWaiting.id).show();
+mbd.videoWaiting.play();var _videoPlaying=mbd.videoPlaying;var _videoWaiting=mbd.videoWaiting;
+mbd.videoWaiting=_videoPlaying;mbd.videoPlaying=_videoWaiting},400)},getCurrentTime:function(){if(!mbd.ie8()){return mbd.videoPlaying.currentTime
+}else{return mbd.videoPlaying.currentTime()}},setCurrentTime:function(time){if(!mbd.ie8()){mbd.videoPlaying.currentTime=time
+}else{mbd.videoPlaying.currentTime(time)}},getDuration:function(){if(!mbd.ie8()){return mbd.videoPlaying.duration
+}else{return mbd.videoPlaying.duration()}},removePictos:function(){$(".PictoView, .InfoBulle").hide().css({left:"50%",top:"50%"});
+mbd.unlightPicto();mbd.unlightArea()},setPictosByView:function(viewID){mbd.displayControls(viewID);
+for(var key in chantiers){var chantier=chantiers[key];var pictoChantier=$("#"+chantier.slugName);
+var displayChantier=false;if(mbd.viewType=="viewHouse"){var view=chantier["viewHouse"]["view_"+viewID];
+if(view!=undefined){if(view.room3d!=undefined){if(view.view3d==undefined){view.view3d=1
+}var thisSlugName=chantier.slugName;var url=mbd.getLinkToView3d(thisSlugName)}else{var url="";
+pictoChantier.click=function(){return false}}mbd.highlightItems(chantier.slugName);
+pictoChantier.data("title",chantier.title);displayChantier=true}if(displayChantier){pictoChantier.css({"left":view.x+"%","top":view.y+"%","opacity":1}).show();
+pictoChantier.hover(function(){mbd.showInfoBulle($(this),"picto");mbd.highlightPicto($(this).attr("id"))
+},function(){mbd.unlightPicto()});mbd.setPictoLink(chantier.slugName,url)}}if(mbd.viewType=="view3d"){var roomID=mbd.videoID;
+var mainChantierName=mbd._GET("chantierName");var mainChantier=mbd.getChantierBySlugName(mainChantierName);
+var mainChantierRoomID=mbd.getRoomIdByChantier(mainChantier);var satellites=mbd.rooms["room_"+roomID]["view_"+viewID];
+for(var key in satellites){var satellite=satellites[key];var slugName=satellite.chantier;
+if(slugName!=mainChantierName){var url=mbd.getLinkToView3d(slugName,window.location.hash);
+mbd.setPictoLink(slugName,url);mbd.displayPicto(slugName,satellite)}}if(mainChantierName==chantier.slugName){var view=chantier["view3d"];
+pictoChantier.data("title",chantier.title);pictoChantier.addClass("main");mbd.displayPicto(chantier.slugName,view)
+}}}},getParent:function(slugNameParent){for(var key in chantiers){if(chantiers[key].slugName==slugNameParent&&(chantiers[key].slugNameParent==undefined||chantiers[key].slugNameParent!=slugNameParent)){return chantiers[key]
+}}return null},getLinkToView3d:function(slugName,defaultUrl){if(defaultUrl==undefined){defaultUrl=""
+}var chantier=mbd.getChantierBySlugName(slugName);var roomID=mbd.getRoomIdByChantier(chantier);
+var viewID=mbd.getViewIdByChantier(chantier);var path=mbd.path;var page=mbd.urlView3d;
+if(roomID!=0){var params="#room3d_"+roomID+"-view3d_"+viewID+"-chantierName_"+slugName
+}else{var params=defaultUrl}return path+page+params},setPictoLink:function(slugName,url){if($(".page-chantier-maison").length>0){$("#"+slugName).attr("href",url);
+$("#"+slugName).on("click",function(e){e.preventDefault();setTimeout(function(){$(".VideoView").fadeOut(500);
+window.location.href=url},800)})}else{$("#"+slugName).click(function(){$(".VideoView").fadeOut(500);
+window.location.href=url})}},displayPicto:function(slugName,coord){var picto=$("#"+slugName);
+var title=mbd.getDataChantierBySlugName(slugName,"title");picto.data("title",title).css({"left":coord.x+"%","top":coord.y+"%","opacity":1}).fadeIn(200,function(){var paramChantier=mbd._GET("chantierName");
+if(paramChantier!=undefined){if(paramChantier==slugName){mbd.highlightPicto(slugName);
+mbd.showInfoBulle(picto)}}}).hover(function(){mbd.showInfoBulle($(this),"picto");
+mbd.highlightPicto($(this).attr("id"))},function(){mbd.unlightPicto()})},getRoomIdByChantier:function(chantier){for(var key in chantier["viewHouse"]){var thisChantierRoomID=chantier["viewHouse"][key].room3d;
+break}return thisChantierRoomID},getViewIdByChantier:function(chantier){for(var key in chantier["viewHouse"]){var thisChantierViewID=chantier["viewHouse"][key].view3d;
+break}return thisChantierViewID},getChantierBySlugName:function(slugName){for(var key in chantiers){var chantier=chantiers[key];
+if(chantier.slugName==slugName){return chantier}}return""},getDataChantierBySlugName:function(slugName,data){for(var key in chantiers){var chantier=chantiers[key];
+if(chantier.slugName==slugName){return chantier[data]}}return""},showInfoBulle:function(nodePicto,centrage){if(centrage==undefined){centrage="picto"
+}var infoBulle=$(".InfoBulle");infoBulle.text(nodePicto.data("title"));var infobulleWidth=parseInt(infoBulle.width());
+var infobulleHeight=parseInt(infoBulle.height());var pictoWidth=parseInt(nodePicto.width());
+var pictoHeight=parseInt(nodePicto.height());infoBulle.removeClass("multiline");switch(centrage){case"picto":var infobulleLeft=parseInt(nodePicto.position().left)-parseInt(infobulleWidth/2)+pictoWidth/2-20;
+var infobulleTop=parseInt(parseInt(nodePicto.position().top)+infobulleHeight+(pictoHeight-15));
+break;case"view":var view3D=$(".view3D");var infobulleLeft=parseInt(view3D.width())/2-parseInt(infobulleWidth/2);
+var infobulleTop=parseInt(view3D.height())/2-parseInt(infobulleHeight/2);break}if(infobulleLeft<0){infobulleLeft=0
+}setTimeout(function(){if(parseInt(infoBulle.height())>35){infoBulle.addClass("multiline")
+}},500);if(infoBulle.length>0){infoBulle.css({"left":infobulleLeft+"px","top":infobulleTop+"px",}).show()
+}},hideInfoBulle:function(){$(".InfoBulle").fadeOut(100).css({left:"50%",top:"50%"})
+},highlightPicto:function(chantierName){var picto=$(".PictoView#"+chantierName);var bgColor=picto.css("backgroundColor");
+picto.addClass("active").css({"boxShadow":"0 0 15px 5px "+bgColor})},unlightPicto:function(chantierName){if(chantierName!=undefined){var picto=$(".PictoView#"+chantierName)
+}else{var picto=$(".PictoView")}picto.removeClass("active").css("boxShadow","none")
+},highlightItems:function(chantierName){$(".item-"+chantierName).addClass("active")
+},unlightItems:function(chantierName){$(".listChantiers .item").removeClass("active")
+},highlightArea:function(area){var src="../../../"+docroot+"images/chantiers/highlight/view3d/"+area+".png";
+var highlightedArea=$("#highlightedArea");highlightedArea.attr("src",src).show()},unlightArea:function(){$("#highlightedArea").attr("src","").hide()
+},reload:function(){if(mbd.ie8()){location.reload()}else{setTimeout(function(){location.reload()
+},50)}},htmlViewHouseDisplayChantiers:function(){var i=1;var listPart=1;for(var key in chantiers){if(i>8){listPart=2
+}var chantier=chantiers[key];var li='<li class="item item-'+chantier.slugName+'" data-chantier="'+chantier.slugName+'">';
+var li_mobile='<li class="item item-'+chantier.slugName+'" data-chantier="'+chantier.slugName+'">';
+var li_menu='<li class="item item-'+chantier.slugName+'" data-chantier="'+chantier.slugName+'">';
+var li_menu2='<li class="item item-'+chantier.slugName+'" data-chantier="'+chantier.slugName+'">';
+var thisChantier=chantier;var tempChantier;var res=(chantier.chantierURL).split("/");
+var urlCh="../"+res[res.length-1];li+='<a href="'+mbd.getLinkToView3d(thisChantier.slugName)+'"><span class="tabletteRTH PictoView2 '+chantier.slugName+'"><img src="../../../docroot/images/chantiers/pictos/'+chantier.slugName+'.png" width="40" alt="'+chantier.title+'"></span><span class="prix mobileRTH">'+chantier.price+'</span><span class="libelle">'+chantier.title+"</span></a></li>";
+li_menu+='<a onclick="javascript: mbd.reload()"  href="'+mbd.getLinkToView3d(thisChantier.slugName)+'"><span class="tabletteRTH PictoView2 '+chantier.slugName+'"><img src="../../../docroot/images/chantiers/pictos/'+chantier.slugName+'.png" width="40" alt="'+chantier.titleShort+'"></span><span class="prix mobileRTH">'+chantier.price+'</span><span class="libelle">'+chantier.titleShort+"</span></a></li>";
+li_menu2+='<a onclick="javascript:setTimeout(function(){location.reload();},10);"  href="'+mbd.getLinkToView3d(thisChantier.slugName)+'"><span class="tabletteRTH PictoView2 '+chantier.slugName+'"><img src="../../../docroot/images/chantiers/pictos/'+chantier.slugName+'.png" width="40" alt="'+chantier.title+'"></span><span class="prix mobileRTH">'+chantier.price+'</span><span class="libelle">'+chantier.title+"</span></a></li>";
+li_mobile+='<a href="'+urlCh+'"><span class="prix mobileRTH">'+thisChantier.price+'</span><span class="libelle">'+chantier.title+"</span></a></li>";
+if($("#list_chantiers").length>0){$("#list_chantiers").append($(li_menu));$("#list_chantiers2").append($(li_menu2))
+}else{$("#liste_chantiers_"+listPart).append($(li));$("#liste_chantiers_mobile_"+listPart).append($(li_mobile))
+}i++}},htmlViewHouseNbrChantiers:function(){var nbrChantiers=mbd.getObjectLength(chantiers);
+$("#nbr_chantiers").text(nbrChantiers);$("#nbr_chantiers2").text(nbrChantiers)},htmlDisplayListPictos:function(){for(var key in chantiers){var chantier=chantiers[key];
+if(!mbd.ie8()){var picto=$('<a href="'+chantier.chantierURL+'" id="'+chantier.slugName+'" class="PictoView '+chantier.slugName+'"><img src="../../../docroot/images/chantiers/pictos/'+chantier.slugName+'.png" width="40" alt="'+chantier.title+'" /></a>')
+}else{var picto=$('<a id="'+chantier.slugName+'" class="PictoView '+chantier.slugName+'"><img src="../../../docroot/images/chantiers/pictos/'+chantier.slugName+'.png" width="40" alt="'+chantier.title+'" /></a>')
+}$("#listPicto").append(picto);if(mbd.ie8()){mbd.setPictoLink(chantier.slugName,chantier.chantierURL)
+}}},htmlDisplayBoxChantier:function(){var i=1;var listPart=1;for(var key in mbd.chantiers){if(i>8){listPart=2
+}var chantier=mbd.chantiers[key];var boxChantier='<div class="BoxChantier bghover-'+chantier.slugName+'">';
+boxChantier+='<a href="'+chantier.chantierURL+'">';boxChantier+='<div class="icon" style="background-color: #'+chantier.color+'"><img src="../../../docroot/images/chantiers/pictos/'+chantier.slugName+'.png" alt=""/></div>';
+boxChantier+='<h3 class="title"><span class="valign">'+chantier.title+"</span></h3>";
+boxChantier+='<div class="tarif">'+chantier.price+' <span class="unitMaisonBrico">&euro; TTC</span></div>';
+boxChantier+="</a>";boxChantier+="</div>";$(".ListPrixChantiers #listWrapper"+listPart).append($(boxChantier));
+i++}},isMobile:function(){if(navigator.userAgent.match(/Android/i)||navigator.userAgent.match(/webOS/i)||navigator.userAgent.match(/iPhone/i)||navigator.userAgent.match(/iPad/i)||navigator.userAgent.match(/iPod/i)||navigator.userAgent.match(/BlackBerry/i)||navigator.userAgent.match(/Windows Phone/i)){return true
+}else{return false}},resizeBlocMarque:function(selector,factor){var selectorWidth=parseInt($(selector).width());
+$(selector).css({width:selectorWidth*factor});var nbrChantiers=$(selector).find(".nbrChantiers");
+var surface=$(selector).find(".surface");var prix=$(selector).find(".prix");var unit=$(selector).find(".unit");
+nbrChantiers.css({fontSize:parseInt(nbrChantiers.css("font-size"))*factor+"px"});
+surface.css({fontSize:parseInt(surface.css("font-size"))*factor+"px"})}};function disp(tab){var c="";
+for(var key in tab){c=c+"\n"+key+" : "+tab[key]}alert(c)}function echo(chaine){}$(document).ready(function(){var urlSeoPoupee=links.poupeeSeoUrl;
+if($("body").find(".page-chantier-maison").length==0&&$("body").find(".page-chantier-intro").length==0){$("#BlocMarque1").on("click",function(){document.location="../../"+urlSeoPoupee
+}).css("cursor","pointer");$("#BlocMarque3").on("click",function(){document.location="../"+urlSeoPoupee
+}).css("cursor","pointer");$("#BlocMarque2").on("click",function(){document.location="../"+urlSeoPoupee
+}).css("cursor","pointer");$("#BlocMarque5").on("click",function(){document.location=urlSeoPoupee
+}).css("cursor","pointer");$("#BlocMarque4").on("click",function(){document.location="../../"+urlSeoPoupee
+}).css("cursor","pointer")}else{}});
