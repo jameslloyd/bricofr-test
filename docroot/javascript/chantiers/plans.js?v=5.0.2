@@ -1,0 +1,4 @@
+jQuery(document).ready(function($){$(".mdbLevelSelector .mdbMenu").click(function(){$(".mdbLevelSelector .mdbMenu").removeClass("active");
+$(this).addClass("active");var id=$(this).attr("id");$(".mdbLevelMap").hide();$("#plan_"+id).show()
+});$(".labelRoom").each(function(){var labelRoom=$(this);labelRoom.css({left:labelRoom.data("x")+"%",top:labelRoom.data("y")+"%"})
+})});

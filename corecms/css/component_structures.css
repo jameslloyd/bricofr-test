@@ -1,0 +1,37 @@
+a:hover{text-decoration:none}.hideElem{display:none}.click{cursor:pointer}.lineThrough{text-decoration:line-through;font-weight:normal}
+.alert{font-weight:bold}.box{overflow:hidden}.center{text-align:center}tr.highlight{font-weight:bold}
+.bd p{margin:0 0 10px;line-height:1.3333em}.bd p.title{margin:0}.bd ol{margin:0 0 14px}
+.bd ol li{list-style-type:decimal;margin-left:20px;padding-bottom:5px}.comp h2{text-shadow:2px 2px 2px #fff}
+.comp.active{border:1px solid #fecd0e!important}.container{border-width:0}.container div#plain_container{border:1px dotted #ccc}
+ul.tabs{zoom:1;position:relative;margin-bottom:0}ul.tabs{margin:0;padding:0;float:left;list-style:none;height:31px;border-bottom:1px solid #d2d4d6;width:100%}
+ul.tabs li{cursor:pointer;float:left;margin:0 0 0 3px;padding:0;height:30px;border:1px solid #d2d4d6;overflow:hidden;position:relative;display:block;background:none repeat scroll 0 0 rgba(30,39,51,0.15)}
+ul.tabs li a{text-decoration:none;display:block;line-height:30px;padding:0 10px;outline:0;color:#06f}
+ul.tabs li:first-child{margin-left:0}ul.tabs li.active{border-bottom:0;height:31px;background-color:white}
+ul.tabs li.active a{color:#06f}ul.tabs li:hover{background:#ccc}ul.tabs li.active:hover{background:#fff}
+.comp ul.tabs{margin-bottom:0!important}.tab_content .bd{margin:4px}.tab_container{background:#fff;color:#005b99;overflow:hidden;clear:both;float:left;width:100%;box-shadow:0 5px 10px #e2e2e2;-moz-box-shadow:0 5px 10px #e2e2e2;-webkit-box-shadow:0 5px 10px #e2e2e2}
+.tab_content{border:1px solid #d2d4d6;border-top:0;padding-top:10px;padding-bottom:10px;font-size:1em}
+.tabs-holder{display:table;width:100%}.bottom ul.tabs{border-bottom:0;border-top:1px solid #00a0df}
+.bottom ul.tabs li{margin-bottom:0;margin-top:-1px}.bottom ul.tabs li.active{border-top:0;border-bottom:1px solid #00a0df}
+.comp .bd{position:relative}.media,.-bd{overflow:hidden}.deals{margin:10px}.image{padding:5px;margin:10px 5px}
+.filter{padding:10px 10px 20px 10px;width:44%;float:left}.filter li{line-height:1.6em}
+.filter h2{padding:0 0 20px 0}.line .carousel{background:#eaeaea}.btn_rt{background:url(http://www.bricodepot.fr/crsdocroot/images/EPAM-box-img/sprite.png) no-repeat 0 -183px}
+.btn_lt{background:url(http://www.bricodepot.fr/crsdocroot/images/EPAM-box-img/sprite.png) no-repeat 0 -150px}
+.carousel .thumbs .thumb{background:#00a0df;color:#fff}.carousel .thumbs .active{background:#fff;color:gray}
+.carousel .btn_rt,.carousel .btn_lt{background-color:rgba(255,255,255,0.5);border:1px solid gray;border-radius:16px;height:31px;width:31px;top:50%;margin-top:-15px;overflow:hidden;opacity:1;cursor:pointer;z-index:25;position:absolute}
+.carousel{position:relative;padding:0}.builded .carousel{padding-bottom:45px}.carousel .holder{position:relative;overflow:hidden;padding:0}
+.builded .carousel .holder{padding-bottom:40px}.carousel ul{width:9999px;margin:0 0 0 -1px;padding:0;list-style:none;position:relative}
+.carousel .btn_rt{right:1px}.carousel .btn_lt{left:1px}.carousel .holder .btn_rt{top:91px!important;right:-6px!important}
+.carousel .holder .btn_lt{top:91px!important;left:-8px!important}.carousel li{float:left;z-index:10;position:relative;width:690px;margin:0 1px}
+.carousel li img{max-width:100%}.carousel li .slide-text{position:absolute;top:0;left:0;padding:10px;width:100%}
+.carousel li .slide-text h2{margin:0;padding:0 3px;font-weight:normal;font-size:1.3333em;text-shadow:none}
+.carousel .thumbs{position:absolute;bottom:10px;right:20px;z-index:20}.carousel .thumbs .thumb{width:16px;height:16px;float:left;text-align:center;border:1px solid #ccc;cursor:pointer;margin:0 0 0 8px;opacity:1!important;border-radius:6px}
+.carousel .thumbs .thumb_border{width:16px;height:16px;float:left;text-align:center;border:1px solid #ccc;cursor:pointer}
+.bottom-text{width:100%;overflow:hidden;margin:3px 0 0;border-top:1px solid #ccc;padding:10px 0 0;float:left}
+.bottom-text h3,.bottom-text a{float:left;padding:3px 13px}.bottom-text span{margin:0;padding:0;float:left}
+.bottom-text span a{text-decoration:none}.bottom-text span a:hover{text-decoration:underline}
+.bottom-text span a:first-child{border:0}.bottom-text a{border-left:1px solid #e0e0e0}
+.bottom-text h3{padding-left:0;padding-right:0;float:left}.productGridCell .carouselSlot{position:relative}
+.productGridCell .carouselSlot>.tooltip{left:50%;margin-left:-100px}.productGridCell{vertical-align:top;white-space:normal}
+.productGridCell .carouselSlot:hover{background:#fff;border-color:#c8c9cc;box-shadow:0 0 2px rgba(0,0,0,0.2)}
+.productGridCell DIV>a{width:180px;text-align:center;display:block;text-decoration:none;margin:auto}
+.productGridCell a .productTitle{text-decoration:underline}.productGridCell .carouselSlot:hover .addToCompare{visibility:visible}
