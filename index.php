@@ -20,7 +20,7 @@
  	<link rel="stylesheet" href="docroot/css/dynamicBox.css?v=5.0.2" />
 	<link rel="stylesheet" href="docroot/css/jquery.sidr.light.css?v=5.0.2">
 	<link rel="stylesheet" media="screen" href="docroot/css/jquery.bxslider.css?v=5.0.2" type="text/css">
-    
+
     <!-- ***************** WEB ***************** -->
 	<link rel="stylesheet" media="screen and (min-width:1024px)" href="docroot/css/web.css?v=5.0.2" type="text/css">
 	<link rel="stylesheet" media="screen and (min-width:1024px)" href="docroot/css/popup_web.css?v=5.0.2" type="text/css">
@@ -28,16 +28,16 @@
 	<link rel="stylesheet" media="screen and (min-width:1024px)" href="docroot/css/frame_web.css?v=5.0.2" type="text/css">
 
 	<!-- ***************** MOBILE & TABLET COMMON ***************** -->
-	<link rel="stylesheet" media="screen and (max-width:1023px)" href="docroot/css/mobile_common.css?v=5.0.2" type="text/css"> 
-	
+	<link rel="stylesheet" media="screen and (max-width:1023px)" href="docroot/css/mobile_common.css?v=5.0.2" type="text/css">
+
 	<!-- ***************** MOBILE ***************** -->
 	<link rel="stylesheet" media="screen and (max-width:767px)" href="docroot/css/mobile.css?v=5.0.2" type="text/css">
-	<link rel="stylesheet" media="screen and (max-width:767px)" href="docroot/css/popup_mobile.css?v=5.0.2" type="text/css"> 
-	
+	<link rel="stylesheet" media="screen and (max-width:767px)" href="docroot/css/popup_mobile.css?v=5.0.2" type="text/css">
+
 	<!-- ***************** TABLET ***************** -->
 	<link rel="stylesheet" media="screen and (max-width:1023px) and (min-width:768px)" href="docroot/css/tablet.css?v=5.0.2" type="text/css">
 	<link rel="stylesheet" media="screen and (max-width:1023px) and (min-width:768px)" href="docroot/css/popup_mobile.css?v=5.0.2" type="text/css">
-	
+
 	<!-- ***************** CHANTIERS - PROD HDF ***************** -->
 	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'  type='text/css'>
 	<link rel="stylesheet" media="screen" href="docroot/plugins/malihu-custom-scrollbar/jquery.mCustomScrollbar.css?v=5.0.2" type="text/css">
@@ -52,19 +52,19 @@
 	<link rel="stylesheet" media="screen" href="docroot/css/responsive.css?v=5.0.2" type="text/css">
 	<link rel="stylesheet"  href="docroot/css/reset.css?v=5.0.2" type="text/css" charset="utf-8">
 	<!-- ***************** END CHANTIERS ***************** -->
-	
+
 	<link href="docroot/css/print.css?v=5.0.2" type="text/css" media="print" rel="stylesheet" charset="utf-8" />
 		<!--[if gte IE 7]>
 		<link href="/docroot/css/ie.css?v=5.0.2" rel="stylesheet" type="text/css" charset="utf-8" />
 	<![endif]-->
-	
+
 	<!--[if lte IE 8]>
 	   <link href="/docroot/videojs/video-js.css?v=5.0.2" rel="stylesheet" type="text/css">
 	   <link href="/docroot/css/ie8.css?v=5.0.2" type="text/css" rel="stylesheet" charset="utf-8" />
     <![endif]-->
-     
-     
-   <!--[if IE]>      
+
+
+   <!--[if IE]>
 		<link rel="stylesheet" href="/docroot/css/ie.css?v=5.0.2" type="text/css">
 	<![endif]-->
 <script type="text/javascript">
@@ -72,12 +72,12 @@
 			dataLayer = [];
 		}
 	</script>
-	
+
 	<script type="text/javascript">
 		var urlParamsPoupeeView='/maison-chantiers/;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41'.split('/');
 		var poupeeSeoUrl=urlParamsPoupeeView[urlParamsPoupeeView.length-2];
 		links = {
-			currSiteUri: "/;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41",	
+			currSiteUri: "/;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41",
 			currPageUri: "/;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41",
 			userActions: "/navigation/userActions.jsp;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41",
 			usefulLinks: "/navigation/usefulLinks.jsp;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41",
@@ -101,15 +101,15 @@
 		<script type="text/javascript" src="docroot/javascript/chantiers/functions-mbd.js?v=5.0.2"></script>
 		<script type="text/javascript" src="docroot/javascript/chantiers/plans.js?v=5.0.2"></script>
 		<script type="text/javascript" src="docroot/javascript/chantiers/respond.min.js?v=5.0.2"></script>
-	
+
 		<!--[if lte IE 8]>
 			<script src="/docroot/videojs/video.js?v=5.0.2"></script>
 			<script type="text/javascript" src="/docroot/javascript/chantiers/css-media-query-ie.min.js?v=5.0.2"></script>
 		<![endif]-->
-	
+
 		<!-- ***************** PLUGINS ***************** -->
 		<!-- <script type="text/javascript" src="/docroot/plugins/malihu-custom-scrollbar/jquery.mCustomScrollbar.js?v=5.0.2"></script> -->
-	
+
 		<!--[if lt IE 9]>
 			<script type="text/javascript" src="/docroot/javascript/chantiers/css-media-query-ie.min.js?v=5.0.2"></script>
 			<script type="text/javascript" src="/docroot/javascript/html5shiv.min.js?v=5.0.2"></script>
@@ -121,7 +121,7 @@
 				  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 				  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 				  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-				
+
 				  ga('create', 'UA-5776335-1', 'bricodepot.fr');
 				  ga('require', 'linkid', 'linkid.js');
 				  ga('send', 'pageview');
@@ -142,7 +142,7 @@
 <div id="bg">
 		<div id="bGMobile" class="mobile"></div>
 		<div class="outBox">
-		
+
 			<header id="hd" class="header-container">
 				<!-- /exeptional event button -->
 
@@ -201,7 +201,7 @@
           });
         </script>
      </div>
-			
+
 			<div class="userBox cell web">
 				<div class="cell storeActionsArea web">
 				<div class="clearfix">
@@ -209,7 +209,7 @@
 					<div class="cell textBlack clearfix">
 						<p class="storeName">
 							<label class="">Mon dépôt :</label>
-							<a title="Voir la fiche détaillée de mon magasin" class="textRed" href="index.html"> - </a></p>	
+							<a title="Voir la fiche détaillée de mon magasin" class="textRed" href="index.html"> - </a></p>
 					</div>
 					<i class="expandablePicto"></i>
 					<i class="expandedPicto"></i>
@@ -217,7 +217,7 @@
 				<p class="storeDetails">
 					<a class="textRed storeChangeLink" onclick="changeForANewStore(false, '99999');" href="index.html#">Changez de dépôt</a></p>
 			</div>
-			
+
 		<div class="cell userActionsArea">
 		<div class="accountArea"> <a class="textBlack" rel="nofollow" href="http://www.bricodepot.fr/myaccount/login.jsp;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41?_DARGS=/navigation/userActions.jsp_AF&amp;_dynSessConf=7353062075249142883&amp;site=99999">Mon compte<i class="sprite sprite-picto_user_man"></i>
 					</a></div><div class="wishlistArea">
@@ -277,95 +277,95 @@
 					     var megaMenuHeight=370;
 					     var megaMenuMaxColumns=5;
                          var categories=new Array();
-                         
+
 	                             categories[2]=
 	                             {id:"brc100002",url:"/materiaux-materiel/",subCategories:
 	                                 [
-	                                 
+
 	                                 ]
 	                             };
-	                     	
+
 	                             categories[3]=
 	                             {id:"brc100007",url:"/menuiserie/",subCategories:
 	                                 [
-	                                 
+
 	                                 ]
 	                             };
-	                     	
+
 	                             categories[4]=
 	                             {id:"brc100014",url:"/salle-de-bains/",subCategories:
 	                                 [
-	                                 
+
 	                                 ]
 	                             };
-	                     	
+
 	                             categories[5]=
 	                             {id:"brc100005",url:"/cuisine/",subCategories:
 	                                 [
-	                                 
+
 	                                 ]
 	                             };
-	                     	
+
 	                             categories[6]=
 	                             {id:"brc100006",url:"/electricite/",subCategories:
 	                                 [
-	                                 
+
 	                                 ]
 	                             };
-	                     	
+
 	                             categories[7]=
 	                             {id:"brc100011",url:"/plomberie/",subCategories:
 	                                 [
-	                                 
+
 	                                 ]
 	                             };
-	                     	
+
 	                             categories[8]=
 	                             {id:"brc100003",url:"/carrelage/",subCategories:
 	                                 [
-	                                 
+
 	                                 ]
 	                             };
-	                     	
+
 	                             categories[9]=
 	                             {id:"brc100009",url:"/bois-interieur/",subCategories:
 	                                 [
-	                                 
+
 	                                 ]
 	                             };
-	                     	
+
 	                             categories[10]=
 	                             {id:"brc100010",url:"/peinture/",subCategories:
 	                                 [
-	                                 
+
 	                                 ]
 	                             };
-	                     	
+
 	                             categories[11]=
 	                             {id:"brc100004",url:"/chauffage-isolation/",subCategories:
 	                                 [
-	                                 
+
 	                                 ]
 	                             };
-	                     	
+
 	                             categories[12]=
 	                             {id:"brc100013",url:"/rangement/",subCategories:
 	                                 [
-	                                 
+
 	                                 ]
 	                             };
-	                     	
+
 	                             categories[13]=
 	                             {id:"brc100008",url:"/outillage/",subCategories:
 	                                 [
-	                                 
+
 	                                 ]
 	                             };
-	                     	
+
 	                             categories[14]=
 	                             {id:"brc100012",url:"/quincaillerie/",subCategories:
 	                                 [
-	                                 
+
 	                                 ]
 	                             };
 	                     	</script>
@@ -586,15 +586,15 @@
 					            				<nav class="subMenuContainer subMenuClassicContainer">
 				<ul class="clearfix">
 					<li class="classicLinkItem">
-													<a class="menuSubItem" href="http://www.bricodepot.fr/?target_url=/livraison/" target="_blank" 
+													<a class="menuSubItem" href="http://www.bricodepot.fr/?target_url=/livraison/" target="_blank"
 													>Brico Dépôt Livraison</a>
 												</li>
 											<li class="classicLinkItem">
-													<a class="menuSubItem" href="http://www.bricodepot.fr/?target_url=/carte_client/" target="_blank" 
+													<a class="menuSubItem" href="http://www.bricodepot.fr/?target_url=/carte_client/" target="_blank"
 													>Brico Dépôt Carte</a>
 												</li>
 											<li class="classicLinkItem">
-													<a class="menuSubItem" href="http://www.bricodepot.fr/?target_url=/EcoPrimes/" target="_blank" 
+													<a class="menuSubItem" href="http://www.bricodepot.fr/?target_url=/EcoPrimes/" target="_blank"
 													>Brico Dépôt Ecoprimes</a>
 												</li>
 											</ul>
@@ -660,7 +660,7 @@
 			<div class="subscribeForm">
 				<form id="subscriptionForm" name="subscriptionForm" action="http://www.bricodepot.fr/subscription/quickSubscribePopup.jsp;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41" method="get" onsubmit="return submitSubscription('/subscription/quickSubscribePopup.jsp;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41',this);"><div style="display:none"><input name="_dyncharset" value="UTF-8" type="hidden"/> </div><div style="display:none"><input name="_dynSessConf" value="7353062075249142883" type="hidden"/> </div><input name="/brico/subscription/NewsSubscriptionFormHandler.successURL" value="/subscription/subscriptionErrors.jsp;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41" type="hidden"/><input name="_D:/brico/subscription/NewsSubscriptionFormHandler.successURL" value=" " type="hidden"/><input name="/brico/subscription/NewsSubscriptionFormHandler.errorURL" value="/subscription/subscriptionErrors.jsp;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41" type="hidden"/><input name="_D:/brico/subscription/NewsSubscriptionFormHandler.errorURL" value=" " type="hidden"/><div class="popCenter">
 						<div class="obligatoryNote web">*champs obligatoires</div>
-						
+
 						<div class="row2">
 							<label  for="name" class="mainLabel web">
 								Prénom<span class="required"> *</span>
@@ -679,7 +679,7 @@
 								<input id="subscriptionForm_lastName_id" maxlength="64" name="lastName" value="" class="text" type="text"/><input name="_D:lastName" value=" " type="hidden"/></label>
 							<div id="subscriptionForm_lastName" class="subscriptionError"></div>
 						</div>
-						
+
 						<div class="row2">
 						<label  for="name" class="mainLabel web">E-mail<span class="required"> * </span>:</label>
 						<label>
@@ -690,10 +690,10 @@
 						</div>
 						<div class="row2">
 						<label class="searchLocationLabel web" for="deposit" id="span-label-select">
-							Sélection de votre dépôt<span class="required"> *</span> 
+							Sélection de votre dépôt<span class="required"> *</span>
 						</label>
 						<label>
-							<!-- 
+							<!--
 							<input id="accountUserDepot" type="hidden" value=""/>
 							-->
 							<span class="mainLabel select_popup mobile" for="deposit" id="span-label-select">Sélection de votre dépôt<span class="required"> *</span> </span>
@@ -823,11 +823,11 @@
 						</div>
 						<div class="row2">
 							<label class="red mobile">*champs obligatoires</label>
-						</div>	
+						</div>
 					</div>
 
-					<br>		
-					
+					<br>
+
 					<!-- defines the URL to go to on success (relative to 'action')-->
 					<div class="textCenter">
 						<input name="/brico/subscription/NewsSubscriptionFormHandler.subscribe" value="Valider" type="hidden"/><input name="_D:/brico/subscription/NewsSubscriptionFormHandler.subscribe" value=" " type="hidden"/><input class="button" type="submit" value="Valider" id="btnValidateNewsSubscribe" />
@@ -844,9 +844,9 @@
 $(document).ready(function() {
 
     if ($(window).width() <= '1024') {
-		
+
     	var currentPopupBox = $('.popupBox');
-	
+
 		$('input', currentPopupBox).change(function() {
 		    if ($(this).val().length >= 1) {
 			$(this).addClass('active');
@@ -854,10 +854,10 @@ $(document).ready(function() {
 			$(this).removeClass('active');
 		    }
 		});
-		
+
 		$('select',currentPopupBox).change(function() {
 		    if ($(this).val().length >= 1) {
-			
+
 			$(this).addClass('active');
 			children = $(this).parents().eq(1).children().first();
 			if (children.is("span")) {
@@ -874,8 +874,8 @@ $(document).ready(function() {
 		    }
 		});
     }
-    
-    	
+
+
     $("#btnValidateNewsSubscribe").click(function(){
     	dataLayer.push({ 'pageName': 'newsletter',
     		'magasin': '',
@@ -885,7 +885,7 @@ $(document).ready(function() {
 			'Event': 'newsletter'});
     	return true;
     });
-    
+
 });
 </script>
 <div class="usefullLinksContainer mobile clearfix" >
@@ -896,26 +896,26 @@ $(document).ready(function() {
 			<ul class="horizontalBar">
 				<li class="userActionsItem" id="userActionSearch">
 					<span><img alt="" title="" src="docroot/images/header_responsive/mdpi/picto_loupe_off@1x.png" /></span>
-				</li><!-- 
-				
+				</li><!--
+
 				 --><li class="userActionsItem" id="userActionAccount">
 					<a href="http://www.bricodepot.fr/myaccount/login.jsp;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41?site=99999"><img alt="" title="" src="docroot/images/header_responsive/mdpi/picto_man_off@1x.png">
-							</a></li><!-- 
-				
+							</a></li><!--
+
 				 --><li class="userActionsItem"  id="userActionWishlist">
 					<a class="wishListLink" href="index.html#"><img alt="" title="" src="docroot/images/header_responsive/mdpi/picto_list_off@1x.png">
 							</a></li><!--
-				
+
 				 --><li id="userActionMainMenu" class="" >
 					<a id="menuMobileId" href="http://www.bricodepot.fr/mobile/mobileMainMenu.jsp"><img alt="" title="" src="docroot/images/header_responsive/mdpi/picto_burger_off@1x.png"></a>
 				</li>
 			</ul>
-			
+
 			<script type="text/javascript">
-          
+
 		  $(document).ready(function(){
-			  	
-		        
+
+
 			  var isMobile='false';
 			  var isTablet='false';
 			  var lastUsedUriInMobileDevice='';
@@ -929,22 +929,22 @@ $(document).ready(function() {
 					cache:false,
 					sync:false,
 					success: function(data) {
-												
+
 					},error: function(data) {
-						
+
 					}
-			  
+
 				});
-			 	
+
 		  })
-		  
+
 		 </script>
-	
+
 
 </nav>
 	</div>
 <div class="titleBar barRed clearfix mobile storeNameArea">
-				<!-- 
+				<!--
 
  -->
 <label class="textBlack">Votre dépôt : </label>
@@ -965,7 +965,7 @@ $(document).ready(function() {
 				return true;
 			});
 		</script>
-	
+
 	<div class="search_mobile mobile">
 		<form action="http://www.bricodepot.fr/search/node/;jsessionid=36D4AA701FC45A3A144FAFA114186E04.node41" method="GET" id="searchForm_mobile"
 		enctype="application/x-www-form-urlencoded;charset=UTF-8" accept-charset="utf-8" autocomplete="off">
@@ -975,7 +975,7 @@ $(document).ready(function() {
 				<input type="submit" class="mobile" id="searchButton_mobile" value="" />
 		</form>
 	</div>
-	
+
 	<script  type="text/javascript" >
            $("#query_mobile").autocomplete2("/search/typeAhead.jsp",
            {
@@ -1003,7 +1003,7 @@ $(document).ready(function() {
 	  </script>
 	<script type="text/javascript">
 		function getCookieExpireDate() {
-			var cookieTimeout = 34214400000;// Le nombre de millisecondes que font 13 mois 
+			var cookieTimeout = 34214400000;// Le nombre de millisecondes que font 13 mois
 			var date = new Date();
 			date.setTime(date.getTime() + cookieTimeout);
 			var expires = "; expires=" + date.toGMTString();
@@ -1030,7 +1030,7 @@ $(document).ready(function() {
 			return null;
 		}
 
-		// Fonction d'effacement des cookies   
+		// Fonction d'effacement des cookies
 		function delCookie(name) {
 			path = ";path=" + "/";
 			domain = ";domain=" + "." + document.location.hostname;
@@ -1038,7 +1038,7 @@ $(document).ready(function() {
 			document.cookie = name + "=" + path + domain + ";expires=" + expiration;
 		}
 
-		// La fonction d'opt-out   
+		// La fonction d'opt-out
 		function gaOptout() {
 			document.getElementById("ctl00_theseusCookiePolicy_ulCookiePol").style.display = "none";
 			document.cookie = 'hasConsent=false;' + getCookieExpireDate() + ' ; path=/';
@@ -1050,9 +1050,9 @@ $(document).ready(function() {
 		if (!consentCookie) {//L'utilisateur n'a pas encore de cookie de consentement
 			var referrer_host = document.referrer.split('/')[2];
 			if (referrer_host != document.location.hostname) { //si il vient d'un autre site
-				//on désactive le tracking et on affiche la demande de consentement            
+				//on désactive le tracking et on affiche la demande de consentement
 				window.onload = askConsent;
-			} else { //sinon on lui dépose un cookie 
+			} else { //sinon on lui dépose un cookie
 				document.cookie = 'hasConsent=true; ' + getCookieExpireDate() + ' ; path=/';
 			}
 		}
@@ -1096,17 +1096,17 @@ $(document).ready(function() {
 		});
 	</script>
 </header>
-		
+
 			<div class="clearfix">
 				<div>
 				</div>
 		    <script type="text/javascript">
-	   
+
 		$(document).ready(
 				function() {
-				
-				
-					
+
+
+
 					if ($("#EncartPEBPriceUrl").length > 0) {
 						$(".priceData ").empty();
 						$(".priceData").html('0 <span class="unit">&euro; TTC</span>');
@@ -1117,7 +1117,7 @@ $(document).ready(function() {
 </div>
 			<footer class="footer-container textBlack">
 				<div class="line footerLineContainer wrapper clearfix" id="footerLineReinsurance">
-				<ul class="footerLine"><!-- 
+				<ul class="footerLine"><!--
 	--><li class="footerReinsuranceItem pictoLock"><i class="sprite sprite-picto_lock web"></i><span class="center">Paiement<br/>sécurisé</span></li><!--
 	--><li class="footerReinsuranceItem pictoCheck"><i class="sprite sprite-picto_energy web"></i><span class="center">Réduisez votre<br/>facture d'énergie</span></li><!--
 	--><li class="footerReinsuranceItem pictoWoman"><i class="sprite sprite-picto_calc web"></i><span class="center">Devis gratuit<br />en ligne</span></li><!--
@@ -1125,75 +1125,75 @@ $(document).ready(function() {
 	--><li class="footerReinsuranceItem pictoDrive"><i class="sprite sprite-picto_drive web"></i><span class="center">Retrait en dépôt<br/>en 2h</span></li><!--
 	--><li class="footerReinsuranceItem pictoTruck"><i class="sprite sprite-picto_truck web"></i><span class="center">Livraison possible<br/>depuis votre dépôt</span></li><!--
 	--><li class="footerReinsuranceItem pictoKey"><i class="sprite sprite-picto_key web"></i><span class="center">Location de<br/>camionnette</span></li><!--
---></ul></div><!-- 
-			 --><div class="line footerLineContainer wrapper clearfix" id="footerLineSocial"><!--  
+--></ul></div><!--
+			 --><div class="line footerLineContainer wrapper clearfix" id="footerLineSocial"><!--
 				--><div class="footerBox footerBoxYourStore">
 					<p class="footerBoxTitle">Votre dépôt</p>
 <p class="footerStoreName"> - </p>
 <a class="newBtn newBtnRed yourStoreBtn" onclick="changeForANewStore(false, '99999');" href="index.html#">Changez de dépôt</a><a href="http://www.bricodepot.fr/donnez-votre-avis/" class="yourOpinionBtn" target="_parent">
 	  				<img alt="Donnez votre avis et tentez de gagnez 15 €" title="Donnez votre avis et tentez de gagnez 15 €" src="docroot/images/footer/anim-btn-gagner15euros.gif" />
 	  			</a>
-		  	</div><!-- 
+		  	</div><!--
 			 --><div class="footerBox footerBoxCustomerCard">
 			 		<p class="footerBoxTitle">Carte client</p>
 <p class="footerBoxSubTitle"><a title="Créez ou activez votre carte Brico Dépôt en ligne" class="textBlack" href="http://www.bricodepot.fr/carte_client/">Créez ou activez<br/>votre carte en ligne</a></p>
 						<div class="footerBoxContent">
 							<a title="Créez ou activez votre carte Brico Dépôt en ligne" href="http://www.bricodepot.fr/carte_client/"><img src="docroot/images/footer/image_carte_client.jpg" width="144" height="94"  />
 							</a></div>
-					</div><!-- 
+					</div><!--
 			 --><div class="footerBox web">
 					<p class="footerBoxTitle">Communauté / Forum</p>
 <ul class="communityLinks">
-			<li><i class="sprite sprite-arrow_right_red"></i> 
+			<li><i class="sprite sprite-arrow_right_red"></i>
 					<a title="" class="textBlack" href="http://communaute.bricodepot.fr/vos-chantiers">Vos chantiers</a></li>
-			<li><i class="sprite sprite-arrow_right_red"></i> 
+			<li><i class="sprite sprite-arrow_right_red"></i>
 					<a title="" class="textBlack" href="http://communaute.bricodepot.fr/videos">Vidéos</a></li>
-			<li><i class="sprite sprite-arrow_right_red"></i> 
+			<li><i class="sprite sprite-arrow_right_red"></i>
 					<a title="" class="textBlack" href="http://communaute.bricodepot.fr/reponses-experts">Réponses d’experts</a></li>
-			<li><i class="sprite sprite-arrow_right_red"></i> 
+			<li><i class="sprite sprite-arrow_right_red"></i>
 					<a title="" class="textBlack" href="http://communaute.bricodepot.fr/forum">Forum</a></li>
 			</ul>
-			</div><!-- 
+			</div><!--
 			 --><div class="footerBox footerBoxSocial">
 					<p class="footerBoxTitle">Suivez-nous</p>
 <nav>
 					<ul class="socialLinks socialLinksUpper clearfix"><!--
-			
+
 						--><li><a href="https://fr-fr.facebook.com/BricoDepotFrance" title="" target="_blank" >
 							<i class="sprite sprite-picto_facebook"></i>
 						</a></li><!--
-					
+
 						--><li><a href="https://www.linkedin.com/company/brico-depot" title="" target="_blank" >
 							<i class="sprite sprite-picto_linkedin"></i>
 						</a></li><!--
-					
+
 					--></ul>
-				</nav><!-- 
-			
+				</nav><!--
+
 				--><nav>
 					<ul class="socialLinks socialLinksLower clearfix"><!--
-			
+
 						--><li><a href="http://fr.viadeo.com/fr/company/brico-depot" title="" target="_blank" >
 							<i class="sprite sprite-picto_viadeo"></i>
 						</a></li><!--
-					
+
 						--><li><a href="https://www.youtube.com/user/videosbricodepot" title="" target="_blank" >
 							<i class="sprite sprite-picto_youtube"></i>
 						</a></li><!--
-					
+
 					--></ul>
 				</nav><!--
-			
+
 --><div class="footerInnerBox footerInnerBoxNewsletter web">
 		<p class="footerBoxTitle">Newsletter</p>
 		<a id="toQuickSubscride" class="newBtn newBtnLarge newBtnBlack newsletterSubBtn" href="http://www.bricodepot.fr/store/storeSearch.jsp">Inscrivez vous</a><p class="footerBoxSubTitle">pour rester informé(e)</p>
 	</div>
 </div>
-			 </div><!-- 
+			 </div><!--
 			 --><div class="line footerLineContainer wrapper web" id="footerLineUniverseMenuLink">
 					<div class="footerBox footerBoxProductsCateg">
 						<p class="footerBoxTitle">Catégories produits</p>
-<nav>	
+<nav>
 		<ul class="verticalLinks">
 			<li><a class="textBlack" href="http://www.bricodepot.fr/materiaux-materiel/">Matériaux - Matériel</a></li>
 			<li><a class="textBlack" href="http://www.bricodepot.fr/menuiserie/">Menuiserie</a></li>
@@ -1210,7 +1210,7 @@ $(document).ready(function() {
 			<li><a class="textBlack" href="http://www.bricodepot.fr/quincaillerie/">Quincaillerie</a></li>
 			</ul>
 	</nav>
-</div><!-- 
+</div><!--
 				 --><div class="footerBox footerBoxPaperCatalog web">
 						<p class="footerBoxTitle">Consultez le catalogue<br/>de votre dépôt</p>
 <p class="footerBoxContent center">
@@ -1229,7 +1229,7 @@ $(document).ready(function() {
   		</ul>
 		</nav>
   </div>
-					</div><!-- 
+					</div><!--
 				 --><div class="footerBox footerBoxServices web">
 						<p class="footerBoxTitle">
   	Encore + de Services</p><nav>
@@ -1271,7 +1271,7 @@ $(document).ready(function() {
   		</ul>
 		</nav>
   </div>
-					</div><!-- 
+					</div><!--
 				 --><div class="footerBox footerBoxKnowMore web">
 						<p class="footerBoxTitle">
   		En savoir plus sur<br>Brico Dépôt</p>
@@ -1297,7 +1297,7 @@ $(document).ready(function() {
   <a class="footerImageLink" href="index.html#" title="Meilleure chaine de magasin France 2015-2016 - Bricolage" target="_parent"></a>
 		  	<a class="footerImageLink" href="index.html#" title="Enseigne de l'année 2015- Bricolage" target="_parent"></a>
 		  	</div>
-			</div><!-- 
+			</div><!--
 			 --><div class="line footerLineContainer wrapper mobile">
 				<nav>
 		<ul id="footerMenuMobile">
@@ -1323,7 +1323,7 @@ $(document).ready(function() {
 	</nav>
 
 </div>
-			
+
 			<div class="footerLineContainer wrapper clearfix" id="footerLineLinkList">
 		<ul class="footerLine footerLinkList">
 			<li>
@@ -1458,20 +1458,20 @@ function showLocation(position)
 			    var cell = $("<td />");
 			    cell.html(depot.DepotName);
 			    row.append(cell);
-			    
+
 			    cell = $("<td />");
 			    cell.html(depot.DepotDistance + " kms");
 			    row.append(cell);
 			    cell = $("<td />");
 			    if(depot.DepotDriveOk){
-			    	
+
 			    	cell.html("Drive");
-			    	
+
 			    }
 				cell.addClass('listDepotLabel');
 			    row.append(cell);
 			    cell = $("<td />");
-			    
+
 			    var url = depot.DepotSiteUrl;
 			    cell.html("<a onclick=\"changeWebStore("+depot.id+",'"+url+"');\" class=\"button web\" href="http://www.bricodepot.fr/\&quot;#\"">ACCEDER</a><a onclick=\"changeMobileStore("+depot.id+", '"+url+"');\" class=\"button mobile\" href="http://www.bricodepot.fr/\&quot;#\"">ACCEDER</a>");
 			    row.append(cell);
@@ -1630,7 +1630,7 @@ function errorHandler(error)
 			        		<option value='1751' url="/garges/">95 - GARGES LES GONESSE</option>
 			        		<option value='1776' url="/st-witz/">95 - SAINT WITZ</option>
 			        		</select><br/>
-		
+
 		<a href="index.html#" class="button" id="access-btn">ACCÉDER AU SITE</a>
 		<script type="text/javascript">
 			function manageSelectStore(){
@@ -1647,7 +1647,7 @@ function errorHandler(error)
 				  changeWebStore($("#myStoreM").find("option:selected").val(), $("#myStoreM").find("option:selected").attr('url'));
 				 });
 			}
-	
+
 			function runManageSelectStoreWhenJQueryIsLoaded() {
 			    if (window.$){
 			    	manageSelectStore();
@@ -1655,7 +1655,7 @@ function errorHandler(error)
 			        setTimeout(runManageSelectStoreWhenJQueryIsLoaded, 100);
 			    }
 			}
-	
+
 			runManageSelectStoreWhenJQueryIsLoaded();
 		 </script>
 	</form>
@@ -1676,9 +1676,9 @@ function errorHandler(error)
 					</div>
 				</div>
 				<ul class="features clearfix">
-					<li><i class="spritePH spritePH-price"></i><span>des prix bas tous les jours</span></li><!-- 
-				 --><li class="feature-opening"><i class="spritePH spritePH-opening"></i><span>l'ouverture du dépôt dès 7H</span></li><!-- 
-				  --><li class="feature-stock"><i class="spritePH spritePH-stock"></i><span>des stocks énormes disponibles</span></li><!-- 
+					<li><i class="spritePH spritePH-price"></i><span>des prix bas tous les jours</span></li><!--
+				 --><li class="feature-opening"><i class="spritePH spritePH-opening"></i><span>l'ouverture du dépôt dès 7H</span></li><!--
+				  --><li class="feature-stock"><i class="spritePH spritePH-stock"></i><span>des stocks énormes disponibles</span></li><!--
 				 --><li><i class="spritePH spritePH-service"></i><span>libre service dans votre dépôt</span></li>
 				</ul>
 				<div class="footer">
@@ -1693,7 +1693,7 @@ function errorHandler(error)
 	  </script>
 	<script type="text/javascript">
 		function getCookieExpireDate() {
-			var cookieTimeout = 34214400000;// Le nombre de millisecondes que font 13 mois 
+			var cookieTimeout = 34214400000;// Le nombre de millisecondes que font 13 mois
 			var date = new Date();
 			date.setTime(date.getTime() + cookieTimeout);
 			var expires = "; expires=" + date.toGMTString();
@@ -1720,7 +1720,7 @@ function errorHandler(error)
 			return null;
 		}
 
-		// Fonction d'effacement des cookies   
+		// Fonction d'effacement des cookies
 		function delCookie(name) {
 			path = ";path=" + "/";
 			domain = ";domain=" + "." + document.location.hostname;
@@ -1728,7 +1728,7 @@ function errorHandler(error)
 			document.cookie = name + "=" + path + domain + ";expires=" + expiration;
 		}
 
-		// La fonction d'opt-out   
+		// La fonction d'opt-out
 		function gaOptout() {
 			document.getElementById("ctl00_theseusCookiePolicy_ulCookiePol").style.display = "none";
 			document.cookie = 'hasConsent=false;' + getCookieExpireDate() + ' ; path=/';
@@ -1740,9 +1740,9 @@ function errorHandler(error)
 		if (!consentCookie) {//L'utilisateur n'a pas encore de cookie de consentement
 			var referrer_host = document.referrer.split('/')[2];
 			if (referrer_host != document.location.hostname) { //si il vient d'un autre site
-				//on désactive le tracking et on affiche la demande de consentement            
+				//on désactive le tracking et on affiche la demande de consentement
 				window.onload = askConsent;
-			} else { //sinon on lui dépose un cookie 
+			} else { //sinon on lui dépose un cookie
 				document.cookie = 'hasConsent=true; ' + getCookieExpireDate() + ' ; path=/';
 			}
 		}
@@ -1840,20 +1840,20 @@ function showLocation(position)
 			    var cell = $("<td />");
 			    cell.html(depot.DepotName);
 			    row.append(cell);
-			    
+
 			    cell = $("<td />");
 			    cell.html(depot.DepotDistance + " kms");
 			    row.append(cell);
 			    cell = $("<td />");
 			    if(depot.DepotDriveOk){
-			    	
+
 			    	cell.html("Drive");
-			    	
+
 			    }
 				cell.addClass('listDepotLabel');
 			    row.append(cell);
 			    cell = $("<td />");
-			    
+
 			    var url = depot.DepotSiteUrl;
 			    cell.html("<a onclick=\"changeWebStore("+depot.id+",'"+url+"');\" class=\"button web\" href="http://www.bricodepot.fr/\&quot;#\"">ACCEDER</a><a onclick=\"changeMobileStore("+depot.id+", '"+url+"');\" class=\"button mobile\" href="http://www.bricodepot.fr/\&quot;#\"">ACCEDER</a>");
 			    row.append(cell);
@@ -2023,7 +2023,7 @@ function errorHandler(error)
 				        		<option value='1776' url="/st-witz/">95 - SAINT WITZ</option>
 				        		</select></div>
 		<br></br>
-		
+
 		<a href="index.html#" class="button" id="access-btn-mobile">ACCÉDER AU SITE</a>
 		<script type="text/javascript">
 			function manageSelectStoreMobile(){
@@ -2040,7 +2040,7 @@ function errorHandler(error)
 				 	changeMobileStore($("#mobileStoreForm").find("option:selected").val(), $("#mobileStoreForm").find("option:selected").attr('url'));
 				 });
 			}
-	
+
 			function runManageSelectStoreMobileWhenJQueryIsLoaded() {
 			    if (window.$){
 			    	manageSelectStoreMobile();
@@ -2048,7 +2048,7 @@ function errorHandler(error)
 			        setTimeout(manageSelectStoreMobileWhenJQueryIsLoaded, 100);
 			    }
 			}
-	
+
 			runManageSelectStoreMobileWhenJQueryIsLoaded();
 		 </script>
 	</form>
@@ -2057,11 +2057,11 @@ function errorHandler(error)
 
 		<div class="featuresM">
 			<ul>
-				<li><i class="spritePH spritePH-price"></i><span>des prix bas tous les jours</span></li><!-- 
+				<li><i class="spritePH spritePH-price"></i><span>des prix bas tous les jours</span></li><!--
 				 --><li class="featureM-opening"><i class="spritePH spritePH-opening"></i><span>l'ouverture du dépôt dès 7H</span></li>
 			</ul>
 			<ul>
-				<li class="featureM-stock"><i class="spritePH spritePH-stock"></i><span>des stocks énormes disponibles</span></li><!-- 
+				<li class="featureM-stock"><i class="spritePH spritePH-stock"></i><span>des stocks énormes disponibles</span></li><!--
 				 --><li><i class="spritePH spritePH-service"></i><span>libre service dans votre dépôt</span></li>
 			</ul>
 		</div>
@@ -2070,7 +2070,7 @@ function errorHandler(error)
 			<script type="text/javascript">
 			var adperftrackobj = {
 			    client : ""      // <== set your client id here
-			    ,amount : "0.0"   // <== set the total price here 
+			    ,amount : "0.0"   // <== set the total price here
 			    ,invoice_id : ""  // <== set your invoice id here
 			    ,quantity : 0     // <== set the number of items purchased
 			    ,is_client : 0    // <== set to 1 if the client is a new client
@@ -2080,7 +2080,7 @@ function errorHandler(error)
 			// to set free parameter follow this pattern :
 			//      ,"customer_type" : "abc"
 			    }
-			
+
 			    /* don't edit below this point */
 			    ,fullhost : 'bricodepot2.solution.weborama.fr'
 			    ,site : 2315
